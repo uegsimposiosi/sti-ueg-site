@@ -139,7 +139,7 @@
           Simpósio de Tecnologia da Informação
         </h1>
         <p class="mt-3 text-slate-300">UEG — Campus Anápolis de Ciências Exatas e Tecnológicas</p>
-        <p class="mt-1 text-ueg-gold font-bold text-lg">15 e 16 de outubro de 2025</p>
+        <p class="mt-1 text-ueg-gold font-bold text-lg">16 a 18 de setembro</p>
 
         <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
           <a href="#inscricao" class="inline-flex items-center gap-2 bg-ueg-gold text-black font-bold px-6 py-3 rounded-full hover:bg-ueg-gold/90 focus:outline-none focus:ring-2 focus:ring-ueg-gold/40">
@@ -196,19 +196,19 @@
       <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 reveal">
         <div class="text-center max-w-3xl mx-auto">
           <h2 class="text-3xl md:text-5xl font-extrabold text-white">Programação</h2>
-          <p class="mt-3 text-slate-400">Dois dias de imersão em tecnologia e inovação.</p>
+          <p class="mt-3 text-slate-400">Três dias de pura imersão em tecnologia e inovação.</p>
         </div>
 
         <!-- Abas acessíveis -->
         <div class="mt-10 max-w-4xl mx-auto">
           <div class="flex justify-center gap-2 border-b border-white/10" role="tablist" aria-label="Dias do evento">
             <button id="tab-dia1" class="tab-button px-5 py-3 text-sm sm:text-base font-semibold text-ueg-gold border-b-2 border-ueg-gold"
-              role="tab" aria-selected="true" aria-controls="content-dia1">Dia 1 — 15/Out</button>
+              role="tab" aria-selected="true" aria-controls="content-dia1">Dia 1<br>16/Set</button>
             <button id="tab-dia2" class="tab-button px-5 py-3 text-sm sm:text-base font-semibold text-slate-300 border-b-2 border-transparent hover:text-white"
-              role="tab" aria-selected="false" aria-controls="content-dia2">Dia 2 — 16/Out</button>
+              role="tab" aria-selected="false" aria-controls="content-dia2">Dia 2<br>17/Set</button>
               <!-- EDITAR AQUI — DUPLICAR PARA NOVOS DIAS -->
             <button id="tab-dia3"class="tab-button px-5 py-3 text-sm sm:text-base font-semibold text-slate-300 border-b-2 border-transparent hover:text-white"
-              role="tab" aria-selected="false" aria-controls="content-dia3">Dia 3 — 17/Out</button>
+              role="tab" aria-selected="false" aria-controls="content-dia3">Dia 3<br>18/Set</button>
           </div>
 
           <!-- Dia 1 -->
@@ -411,18 +411,26 @@
       <div class="max-w-5xl mx-auto px-4 md:px-6 lg:px-8 reveal">
         <div class="text-center max-w-3xl mx-auto">
           <h2 class="text-3xl md:text-5xl font-extrabold text-white">Inscrições</h2>
-          <p class="mt-3 text-slate-300">As inscrições são realizadas externamente (Eventbrite), uma por <strong>dia de evento</strong>.</p>
         </div>
 
         <div class="mt-10 grid lg:grid-cols-5 gap-6">
           <!-- Info fixa -->
           <aside class="lg:col-span-2 bg-dark-card/80 border border-white/5 rounded-2xl p-6 shadow-glow">
-            <h3 class="text-xl font-bold text-white flex items-center gap-2"><i data-lucide="info"></i> Informações</h3>
             <ul class="mt-4 space-y-3 text-sm text-slate-300">
-              <!-- EDITAR AQUI: Datas, local, contato -->
-              <li class="flex items-start gap-2"><i data-lucide="calendar" class="mt-0.5"></i> 15 e 16 de outubro de 2025</li>
+              <li class="flex items-start gap-2"><i data-lucide="calendar" class="mt-0.5"></i> 16 a 18 de setembro</li>
               <li class="flex items-start gap-2"><i data-lucide="map-pin" class="mt-0.5"></i> UEG — Câmpus Anápolis de Ciências Exatas e Tecnológicas</li>
-              <li class="flex items-start gap-2"><i data-lucide="clock" class="mt-0.5"></i> Abertura às 19:00 (dia 15)</li>
+              <div class="mt-3 rounded-lg overflow-hidden" style="max-width:100%;">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3827.8546242064776!2d-48.94872882394527!3d-16.38136633768419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ebb4fa9a0e811%3A0x26cba1f1f43e5366!2sUEG%20-%20C%C3%A2mpus%20Central%20-%20Sede%20An%C3%A1polis%20-%20Ci%C3%AAncias%20Exatas%20e%20Tecnol%C3%B3gicas%20-%20CET%20-%20Henrique%20Santillo!5e0!3m2!1spt-BR!2sbr!4v1756077260135!5m2!1spt-BR!2sbr&style=feature:all|element:geometry|color:0x212121&style=feature:all|element:labels.text.fill|color:0xffffff&style=feature:all|element:labels.text.stroke|color:0x000000&style=feature:road|element:geometry|color:0x383838"
+                  width="100%" 
+                  height="30%" 
+                  style="border:0;" 
+                  allowfullscreen="" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+              <li class="flex items-start gap-2"><i data-lucide="clock" class="mt-0.5"></i> Abertura às 19:00 no dia 16/09</li>
               <li class="flex items-start gap-2"><i data-lucide="mail" class="mt-0.5"></i> Contato: sti@ueg.br</li>
             </ul>
           </aside>
@@ -431,58 +439,32 @@
           <div class="lg:col-span-3 grid gap-6">
             <!-- CTAs por dia -->
             <div class="bg-dark-card/80 border border-white/5 rounded-2xl p-6 shadow-glow">
-              <h3 class="text-lg font-bold text-white">Escolha o dia e faça sua inscrição</h3>
               <div class="mt-4 grid sm:grid-cols-2 gap-3">
                 <!-- Os hrefs são preenchidos pela CONFIG RÁPIDA no <head> -->
-                <a id="ctaDia1" href="https://eventbrite.com/e/SEU_EVENTO_DIA1" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-ueg-gold text-black font-bold px-5 py-3 rounded-xl hover:bg-ueg-gold/90">
+                <a id="ctaDia1" href="https://eventbrite.com" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-ueg-gold text-black font-bold px-5 py-3 rounded-xl hover:bg-ueg-gold/90">
                   <i data-lucide="ticket"></i>
-                  <span>Inscrever-se — Dia 1 (15/Out)</span>
+                  <center><span>Inscrever-se pelo Eventbrite</span></center>
                 </a>
-                <a id="ctaDia2" href="https://eventbrite.com/e/SEU_EVENTO_DIA2" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-ueg-gold text-black font-bold px-5 py-3 rounded-xl hover:bg-ueg-gold/90">
-                  <i data-lucide="ticket"></i>
-                  <span>Inscrever-se — Dia 2 (16/Out)</span>
-                </a>
+                <a id="linkGuiaWeb" href="https://youtube.com/SEU_VIDEO_GUIA_WEB" target="_blank" rel="noopener" class="block bg-dark-card/80 border border-white/5 rounded-2xl p-5 hover:border-ueg-gold/30 shadow-glow">
+                <div class="flex items-center gap-3">
+                  <i data-lucide="monitor-play" class="text-ueg-gold"></i>
+                  <div>
+                    <p class="font-semibold text-white">Como inscrever-se</p>
+                    <p class="text-xs text-slate-400">Vídeo com passo-a-passo</p>
+                  </div>
+                </div>
+              </a>
               </div>
-              <p class="mt-3 text-xs text-slate-400">Dica: você pode abrir os links em nova aba e concluir em segurança no site do parceiro (Eventbrite).</p>
             </div>
 
             <!-- Avisos importantes -->
             <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
               <h4 class="font-semibold text-white flex items-center gap-2"><i data-lucide="alert-triangle" class="text-ueg-gold"></i> Avisos importantes</h4>
               <ul class="mt-3 space-y-2 text-sm text-slate-300 list-disc pl-5">
-                <li>Inscreva-se <strong>separadamente em cada dia</strong> que deseja participar.</li>
                 <li>Após a inscrição, <strong>baixe/salve o ticket com QR code</strong> do Eventbrite.</li>
                 <li>Leve o QR code (impresso ou no celular) para <strong>validar a presença</strong>.</li>
                 <li>Chegue com 15 minutos de antecedência para leitura do QR code.</li>
               </ul>
-              <div class="mt-3 text-sm">
-                <a id="linkBaixar" href="https://eventbrite.com/myevent?download=ticket" target="_blank" rel="noopener" class="inline-flex items-center gap-2 underline hover:no-underline">
-                  <i data-lucide="download"></i>
-                  <span>Como baixar/recuperar meus ingressos</span>
-                </a>
-              </div>
-            </div>
-
-            <!-- Tutoriais rápidos -->
-            <div class="grid sm:grid-cols-2 gap-4">
-              <a id="linkGuiaWeb" href="https://youtube.com/SEU_VIDEO_GUIA_WEB" target="_blank" rel="noopener" class="block bg-dark-card/80 border border-white/5 rounded-2xl p-5 hover:border-ueg-gold/30 shadow-glow">
-                <div class="flex items-center gap-3">
-                  <i data-lucide="monitor-play" class="text-ueg-gold"></i>
-                  <div>
-                    <p class="font-semibold text-white">Como se inscrever (Web)</p>
-                    <p class="text-xs text-slate-400">Passo a passo no navegador</p>
-                  </div>
-                </div>
-              </a>
-              <a id="linkGuiaApp" href="https://youtube.com/SEU_VIDEO_GUIA_APP" target="_blank" rel="noopener" class="block bg-dark-card/80 border border-white/5 rounded-2xl p-5 hover:border-ueg-gold/30 shadow-glow">
-                <div class="flex items-center gap-3">
-                  <i data-lucide="smartphone" class="text-ueg-gold"></i>
-                  <div>
-                    <p class="font-semibold text-white">Como se inscrever (App)</p>
-                    <p class="text-xs text-slate-400">Passo a passo no aplicativo</p>
-                  </div>
-                </div>
-              </a>
             </div>
           </div>
         </div>
