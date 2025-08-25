@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>STI UEG | Simpósio de Tecnologia da Informação</title>
+  <title>UEG - Simpósio de Tecnologia da Informação</title>
   <meta name="description" content="Simpósio de Tecnologia da Informação da UEG — programação, palestrantes, inscrições, curso de Sistemas de Informação e galeria." />
   <meta name="theme-color" content="#0d47a1" />
 
   <!-- Open Graph / Social -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="STI UEG | Simpósio de Tecnologia da Informação" />
+  <meta property="og:title" content="UEG - Simpósio de Tecnologia da Informação" />
   <meta property="og:description" content="Participe do Simpósio de Tecnologia da Informação da UEG. Programação, palestrantes e inscrições." />
   <meta property="og:image" content="https://placehold.co/1200x630/0d47a1/ffffff?text=STI+UEG" />
 
   <!-- Favicon (placeholder) -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%230d47a1'/%3E%3Ctext x='50' y='58' text-anchor='middle' font-size='52' font-family='Inter,Arial' fill='%23fff'%3ESTI%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" href="assets\images\UegLogoSimples.ico" />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -59,45 +59,17 @@
     .reveal.active{opacity:1;transform:none}
     .no-js .reveal{opacity:1;transform:none}
     @media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none}}
-  </style>
-  
-  <!-- =============================
-       CONFIG RÁPIDA — EDITAR AQUI
-       =============================
-       Substitua as URLs abaixo pelos seus links reais (Eventbrite e tutoriais).
-       Pode deixar em branco; os botões mantêm href padrão.  -->
-  <script>
-    window.STI_CONFIG = {
-      links: {
-        /* EDITAR AQUI: URLs do Eventbrite por dia */
-        dia1: 'https://eventbrite.com/e/SEU_EVENTO_DIA1',
-        dia2: 'https://eventbrite.com/e/SEU_EVENTO_DIA2',
-        /* EDITAR AQUI: Tutoriais/Guias (opcional) */
-        guiaWeb: 'https://youtube.com/SEU_VIDEO_GUIA_WEB',
-        guiaApp: 'https://youtube.com/SEU_VIDEO_GUIA_APP',
-        /* EDITAR AQUI: Link "baixar ingressos" (opcional) */
-        baixar: 'https://eventbrite.com/myevent?download=ticket'
-      }
-    };
-  </script>
+  </style>  
 </head>
+
 <body class="bg-dark-bg text-slate-200 font-sans selection:bg-ueg-gold selection:text-black">
-  <!-- Link de pular para o conteúdo -->
   <a href="#inicio" class="sr-only focus:not-sr-only focus:fixed focus:z-50 focus:top-4 focus:left-4 bg-ueg-gold text-black font-bold px-4 py-2 rounded-md">Pular para o conteúdo</a>
 
-  <!-- Header / Navegação -->
   <header class="sticky top-0 z-50 bg-dark-bg/70 backdrop-blur border-b border-white/5">
     <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 h-16 flex items-center justify-between">
-      <!-- ================= LOGO / MARCA =================
-           EDITAR AQUI:
-           - Troque o src pelo arquivo da LOGO UEG (preferencialmente PNG com fundo transparente). -->
       <a href="#inicio" class="flex items-center gap-3 text-white font-black tracking-wider text-xl" aria-label="Página inicial STI UEG">
-        
-          <img src="https://www.app.ueg.br/library/imagens/logos/png/Ueg_white.png" alt="Logo UEG" class="h-7 w-auto" />
-        
-        <span class="hidden sm:inline">STI</span>
+          <img src="assets\images\LogoUegBranca.png" alt="Logo UEG" class="h-7 w-auto" />
       </a>
-      <!-- ================================================= -->
 
       <nav class="hidden md:flex items-center gap-6" aria-label="Navegação primária">
         <a class="hover:text-white/90 text-slate-300" href="#sobre">Sobre</a>
@@ -114,6 +86,7 @@
         <i data-lucide="menu"></i>
       </button>
     </div>
+
     <!-- Mobile menu -->
     <div id="mobileMenu" class="hidden md:hidden border-t border-white/5 bg-dark-card">
       <div class="max-w-7xl mx-auto px-4 py-3 grid gap-1">
@@ -130,18 +103,18 @@
   </header>
 
   <main>
-    <!-- HERO -->
     <section id="inicio" class="relative min-h-[78vh] md:min-h-[86vh] grid place-items-center overflow-hidden">
       <div class="absolute inset-0">
-        <img src="https://www.hdwallpapers.in/download/technology_circuit_board_hd_technology-HD.jpg" alt="Fundo abstrato de tecnologia" class="w-full h-full object-cover opacity-20" loading="eager" />
+        <img src="assets\images\WallpaperFundo.jpg" alt="Fundo abstrato de tecnologia" class="w-full h-full object-cover opacity-20" loading="eager" />
+        <!--CRÉDITOS DA IMAGEM: https://www.hdwallpapers.in/technology_circuit_board_hd_technology-wallpapers.html-->
       </div>
       <div class="relative z-10 max-w-5xl px-4 md:px-6 text-center reveal active">
-        <!-- EDITAR AQUI: Título, campus e datas -->
         <h1 class="text-4xl md:text-6xl font-black tracking-tight text-white">
           Simpósio de Tecnologia da Informação
         </h1>
         <p class="mt-3 text-slate-300">UEG — Campus Anápolis de Ciências Exatas e Tecnológicas</p>
-        <p class="mt-1 text-ueg-gold font-bold text-lg">15 e 16 de outubro de 2025</p>
+        <p class="mt-1 text-ueg-gold font-bold text-lg">16 a 18 de setembro</p>
+        <p id="contador" class="mt-1 text-ueg-gold font-bold text-lg"></p>
 
         <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
           <a href="#inscricao" class="inline-flex items-center gap-2 bg-ueg-gold text-black font-bold px-6 py-3 rounded-full hover:bg-ueg-gold/90 focus:outline-none focus:ring-2 focus:ring-ueg-gold/40">
@@ -156,7 +129,6 @@
       </div>
     </section>
 
-    <!-- SOBRE -->
     <section id="sobre" class="scroll-mt-24 py-20 md:py-28">
       <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 reveal">
         <div class="text-center max-w-3xl mx-auto">
@@ -164,25 +136,20 @@
           <p class="mt-3 text-slate-400">Exploramos fronteiras da tecnologia e inspiramos a próxima geração de inovadores.</p>
         </div>
         <div class="mt-12 grid sm:grid-cols-2 gap-6">
-          <!-- Card: Sobre o Evento -->
           <article class="bg-dark-card/80 border border-white/5 rounded-2xl p-7 shadow-glow hover:border-ueg-gold/30 transition">
             <header class="flex items-center gap-3 mb-3">
               <i data-lucide="sparkles" class="text-ueg-gold"></i>
               <h3 class="text-2xl font-bold text-white">Sobre o evento</h3>
             </header>
-            <!-- EDITAR AQUI: Descrição do evento -->
             <p class="text-slate-300 leading-relaxed">O Simpósio de Tecnologia da Informação (STI) da UEG reúne estudantes, docentes, pesquisadores e profissionais para discutir tendências, desafios e inovações em TI. A programação inclui palestras, minicursos e workshops, promovendo conhecimento, troca de experiências e networking.</p>
           </article>
-          <!-- Card: Curso de SI -->
           <article class="bg-dark-card/80 border border-white/5 rounded-2xl p-7 shadow-glow hover:border-ueg-gold/30 transition">
             <header class="flex items-center gap-3 mb-3">
               <i data-lucide="graduation-cap" class="text-ueg-gold"></i>
               <h3 class="text-2xl font-bold text-white">Sistemas de Informação</h3>
             </header>
-            <!-- EDITAR AQUI: Resumo do curso -->
             <p class="text-slate-300 leading-relaxed">O Bacharelado em Sistemas de Informação da UEG forma profissionais com base teórica e prática sólidas para desenvolver, integrar e gerenciar soluções computacionais em diversos setores. O curso valoriza projeto prático, pesquisa aplicada e parcerias com o mercado.</p>
             <div class="mt-4 flex flex-wrap gap-2 text-sm">
-              <!-- EDITAR AQUI: Áreas de ênfase -->
               <span class="px-3 py-1 rounded-full bg-white/5">Desenvolvimento de Software</span>
               <span class="px-3 py-1 rounded-full bg-white/5">Dados & IA</span>
               <span class="px-3 py-1 rounded-full bg-white/5">Segurança</span>
@@ -193,29 +160,24 @@
       </div>
     </section>
 
-    <!-- PROGRAMAÇÃO -->
     <section id="programacao" class="scroll-mt-24 py-20 md:py-28 bg-dark-card/60">
       <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 reveal">
         <div class="text-center max-w-3xl mx-auto">
           <h2 class="text-3xl md:text-5xl font-extrabold text-white">Programação</h2>
-          <p class="mt-3 text-slate-400">Dois dias de imersão em tecnologia e inovação.</p>
+          <p class="mt-3 text-slate-400">Três dias de pura imersão em tecnologia e inovação.</p>
         </div>
 
-        <!-- Abas acessíveis -->
         <div class="mt-10 max-w-4xl mx-auto">
           <div class="flex justify-center gap-2 border-b border-white/10" role="tablist" aria-label="Dias do evento">
             <button id="tab-dia1" class="tab-button px-5 py-3 text-sm sm:text-base font-semibold text-ueg-gold border-b-2 border-ueg-gold"
-              role="tab" aria-selected="true" aria-controls="content-dia1">Dia 1 — 15/Out</button>
+              role="tab" aria-selected="true" aria-controls="content-dia1">Dia 1<br>16/Set</button>
             <button id="tab-dia2" class="tab-button px-5 py-3 text-sm sm:text-base font-semibold text-slate-300 border-b-2 border-transparent hover:text-white"
-              role="tab" aria-selected="false" aria-controls="content-dia2">Dia 2 — 16/Out</button>
-              <!-- EDITAR AQUI — DUPLICAR PARA NOVOS DIAS -->
+              role="tab" aria-selected="false" aria-controls="content-dia2">Dia 2<br>17/Set</button>
             <button id="tab-dia3"class="tab-button px-5 py-3 text-sm sm:text-base font-semibold text-slate-300 border-b-2 border-transparent hover:text-white"
-              role="tab" aria-selected="false" aria-controls="content-dia3">Dia 3 — 17/Out</button>
+              role="tab" aria-selected="false" aria-controls="content-dia3">Dia 3<br>18/Set</button>
           </div>
 
-          <!-- Dia 1 -->
           <div id="content-dia1" class="tab-content space-y-4 pt-6" role="tabpanel" tabindex="0" aria-labelledby="tab-dia1">
-            <!-- EDITAR AQUI: Itens do Dia 1 -->
             <div class="flex items-start gap-4 bg-white/5 rounded-xl p-5 border border-white/5">
               <div class="shrink-0 w-16 h-16 grid place-items-center rounded-lg bg-ueg-blue/20">
                 <i data-lucide="megaphone"></i>
@@ -245,9 +207,7 @@
             </div>
           </div>
 
-          <!-- Dia 2 -->
           <div id="content-dia2" class="tab-content space-y-4 pt-6 hidden" role="tabpanel" tabindex="0" aria-labelledby="tab-dia2">
-            <!-- EDITAR AQUI: Itens do Dia 2 -->
             <div class="flex items-start gap-4 bg-white/5 rounded-xl p-5 border border-white/5">
               <div class="shrink-0 w-16 h-16 grid place-items-center rounded-lg bg-ueg-blue/20">
                 <i data-lucide="beaker"></i>
@@ -277,9 +237,7 @@
             </div>
           </div>
 
-          <!-- DIA 3 -->
               <div id="content-dia3" class="tab-content space-y-4 pt-6 hidden" role="tabpanel" tabindex="0" aria-labelledby="tab-dia3">
-          <!-- MODELO DE ITEM — DUPLIQUE QUANTO PRECISAR -->
            <div class="flex items-start gap-4 bg-white/5 rounded-xl p-5 border border-white/5">
              <div class="shrink-0 w-16 h-16 grid place-items-center rounded-lg bg-ueg-blue/20">
               <i data-lucide="code-2"></i>
@@ -294,7 +252,6 @@
     </div>
     </section>
 
-    <!-- PALESTRANTES (CARROSSEL HORIZONTAL) -->
     <section id="palestrantes" class="scroll-mt-24 py-20 md:py-28">
       <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 reveal">
         <div class="text-center max-w-3xl mx-auto">
@@ -302,7 +259,6 @@
           <p class="mt-3 text-slate-400">Mentes que estão moldando o futuro da tecnologia.</p>
         </div>
 
-        <!-- Controles do carrossel -->
         <div class="mt-8 flex items-center justify-between">
           <button id="speakersPrev" class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 focus:ring-2 focus:ring-white/20" aria-label="Palestrantes anteriores">
             <i data-lucide="arrow-left"></i><span class="hidden sm:inline">Anterior</span>
@@ -313,17 +269,13 @@
           </button>
         </div>
 
-        <!-- Trilho com scroll-snap (DUPLICAR CARDS À VONTADE) -->
         <div id="speakersTrack" class="mt-6 flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4">
-          <!-- MODELO DE CARD — DUPLICAR A PARTIR DAQUI -->
           <article class="snap-start shrink-0 w-[280px] sm:w-[300px] bg-dark-card/80 border border-white/5 rounded-2xl p-8 text-center shadow-glow hover:border-ueg-gold/30 transition">
-            <!-- EDITAR AQUI: Foto, nome, cargo, bio curta -->
             <img class="w-28 h-28 rounded-full mx-auto border-4 border-white/10 object-cover" src="https://placehold.co/320x320/121a2a/FFFFFF?text=AL" alt="Foto de Ana Lúcia" loading="lazy" />
             <h3 class="mt-5 text-xl font-bold text-white">Dra. Ana Lúcia</h3>
             <p class="text-ueg-gold font-semibold">IA — Google</p>
             <p class="mt-2 text-sm text-slate-400">Aprendizado de máquina e ética em IA.</p>
           </article>
-          <!-- /MODELO DE CARD -->
 
           <article class="snap-start shrink-0 w-[280px] sm:w-[300px] bg-dark-card/80 border border-white/5 rounded-2xl p-8 text-center shadow-glow hover:border-ueg-gold/30 transition">
             <img class="w-28 h-28 rounded-full mx-auto border-4 border-white/10 object-cover" src="https://placehold.co/320x320/121a2a/FFFFFF?text=MV" alt="Foto de Marcos Vilela" loading="lazy" />
@@ -339,7 +291,6 @@
             <p class="mt-2 text-sm text-slate-400">Empreendedora em EdTech e inovação.</p>
           </article>
 
-          <!-- EXEMPLOS EXTRAS (pode remover/duplicar) -->
           <article class="snap-start shrink-0 w-[280px] sm:w-[300px] bg-dark-card/80 border border-white/5 rounded-2xl p-8 text-center shadow-glow hover:border-ueg-gold/30 transition">
             <img class="w-28 h-28 rounded-full mx-auto border-4 border-white/10 object-cover" src="https://placehold.co/320x320/121a2a/FFFFFF?text=RB" alt="Foto de Roberta Braga" loading="lazy" />
             <h3 class="mt-5 text-xl font-bold text-white">Roberta Braga</h3>
@@ -361,11 +312,9 @@
             <p class="mt-2 text-sm text-slate-400">Pesquisa com usuários e acessibilidade.</p>
           </article>
         </div>
-        <!-- /Trilho -->
       </div>
     </section>
 
-    <!-- GALERIA (CARROSSEL + SNAP) -->
     <section id="galeria" class="scroll-mt-24 py-20 md:py-28 bg-dark-card/60">
       <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 reveal">
         <div class="text-center max-w-3xl mx-auto">
@@ -383,14 +332,10 @@
           </button>
         </div>
 
-        <!-- Trilho da galeria (DUPLICAR FIGURES À VONTADE) -->
         <div id="galleryTrack" class="mt-6 flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-2">
-          <!-- MODELO DE IMAGEM — DUPLICAR DAQUI -->
           <figure class="snap-start shrink-0 w-[280px] h-[200px] sm:w-[360px] sm:h-[240px] overflow-hidden rounded-xl border border-white/5 shadow-glow">
-            <!-- EDITAR AQUI: src e alt -->
             <img class="w-full h-full object-cover hover:scale-105 transition" src="https://placehold.co/800x600/0d47a1/FFFFFF?text=STI+2024" alt="Público do STI 2024" loading="lazy" />
           </figure>
-          <!-- /MODELO -->
 
           <figure class="snap-start shrink-0 w-[280px] h-[200px] sm:w-[360px] sm:h-[240px] overflow-hidden rounded-xl border border-white/5 shadow-glow">
             <img class="w-full h-full object-cover hover:scale-105 transition" src="https://placehold.co/800x600/ffab00/111827?text=STI" alt="Palestra em auditório" loading="lazy" />
@@ -408,83 +353,59 @@
       </div>
     </section>
 
-    <!-- INSCRIÇÃO (CTAs externos) -->
     <section id="inscricao" class="scroll-mt-24 py-20 md:py-28">
       <div class="max-w-5xl mx-auto px-4 md:px-6 lg:px-8 reveal">
         <div class="text-center max-w-3xl mx-auto">
           <h2 class="text-3xl md:text-5xl font-extrabold text-white">Inscrições</h2>
-          <p class="mt-3 text-slate-300">As inscrições são realizadas externamente (Eventbrite), uma por <strong>dia de evento</strong>.</p>
         </div>
 
         <div class="mt-10 grid lg:grid-cols-5 gap-6">
-          <!-- Info fixa -->
           <aside class="lg:col-span-2 bg-dark-card/80 border border-white/5 rounded-2xl p-6 shadow-glow">
-            <h3 class="text-xl font-bold text-white flex items-center gap-2"><i data-lucide="info"></i> Informações</h3>
             <ul class="mt-4 space-y-3 text-sm text-slate-300">
-              <!-- EDITAR AQUI: Datas, local, contato -->
-              <li class="flex items-start gap-2"><i data-lucide="calendar" class="mt-0.5"></i> 15 e 16 de outubro de 2025</li>
+              <li class="flex items-start gap-2"><i data-lucide="calendar" class="mt-0.5"></i> 16 a 18 de setembro</li>
               <li class="flex items-start gap-2"><i data-lucide="map-pin" class="mt-0.5"></i> UEG — Câmpus Anápolis de Ciências Exatas e Tecnológicas</li>
-              <li class="flex items-start gap-2"><i data-lucide="clock" class="mt-0.5"></i> Abertura às 19:00 (dia 15)</li>
+              <div class="mt-3 rounded-lg overflow-hidden" style="max-width:100%;">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3827.8546242064776!2d-48.94872882394527!3d-16.38136633768419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ebb4fa9a0e811%3A0x26cba1f1f43e5366!2sUEG%20-%20C%C3%A2mpus%20Central%20-%20Sede%20An%C3%A1polis%20-%20Ci%C3%AAncias%20Exatas%20e%20Tecnol%C3%B3gicas%20-%20CET%20-%20Henrique%20Santillo!5e0!3m2!1spt-BR!2sbr!4v1756077260135!5m2!1spt-BR!2sbr&style=feature:all|element:geometry|color:0x212121&style=feature:all|element:labels.text.fill|color:0xffffff&style=feature:all|element:labels.text.stroke|color:0x000000&style=feature:road|element:geometry|color:0x383838"
+                  width="100%" 
+                  height="30%" 
+                  style="border:0;" 
+                  allowfullscreen="" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+              <li class="flex items-start gap-2"><i data-lucide="clock" class="mt-0.5"></i> Abertura às 19:00 no dia 16/09</li>
               <li class="flex items-start gap-2"><i data-lucide="mail" class="mt-0.5"></i> Contato: sti@ueg.br</li>
             </ul>
           </aside>
 
-          <!-- Ações / CTAs por dia + guia -->
           <div class="lg:col-span-3 grid gap-6">
-            <!-- CTAs por dia -->
             <div class="bg-dark-card/80 border border-white/5 rounded-2xl p-6 shadow-glow">
-              <h3 class="text-lg font-bold text-white">Escolha o dia e faça sua inscrição</h3>
               <div class="mt-4 grid sm:grid-cols-2 gap-3">
-                <!-- Os hrefs são preenchidos pela CONFIG RÁPIDA no <head> -->
-                <a id="ctaDia1" href="https://eventbrite.com/e/SEU_EVENTO_DIA1" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-ueg-gold text-black font-bold px-5 py-3 rounded-xl hover:bg-ueg-gold/90">
+                <a id="ctaDia1" href="https://eventbrite.com" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-ueg-gold text-black font-bold px-5 py-3 rounded-xl hover:bg-ueg-gold/90">
                   <i data-lucide="ticket"></i>
-                  <span>Inscrever-se — Dia 1 (15/Out)</span>
+                  <center><span>Inscrever-se pelo Eventbrite</span></center>
                 </a>
-                <a id="ctaDia2" href="https://eventbrite.com/e/SEU_EVENTO_DIA2" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-ueg-gold text-black font-bold px-5 py-3 rounded-xl hover:bg-ueg-gold/90">
-                  <i data-lucide="ticket"></i>
-                  <span>Inscrever-se — Dia 2 (16/Out)</span>
-                </a>
+                <a id="linkGuiaWeb" href="https://youtube.com" target="_blank" rel="noopener" class="block bg-dark-card/80 border border-white/5 rounded-2xl p-5 hover:border-ueg-gold/30 shadow-glow">
+                <div class="flex items-center gap-3">
+                  <i data-lucide="monitor-play" class="text-ueg-gold"></i>
+                  <div>
+                    <p class="font-semibold text-white">Como inscrever-se</p>
+                    <p class="text-xs text-slate-400">Vídeo com passo-a-passo</p>
+                  </div>
+                </div>
+              </a>
               </div>
-              <p class="mt-3 text-xs text-slate-400">Dica: você pode abrir os links em nova aba e concluir em segurança no site do parceiro (Eventbrite).</p>
             </div>
 
-            <!-- Avisos importantes -->
             <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
               <h4 class="font-semibold text-white flex items-center gap-2"><i data-lucide="alert-triangle" class="text-ueg-gold"></i> Avisos importantes</h4>
               <ul class="mt-3 space-y-2 text-sm text-slate-300 list-disc pl-5">
-                <li>Inscreva-se <strong>separadamente em cada dia</strong> que deseja participar.</li>
                 <li>Após a inscrição, <strong>baixe/salve o ticket com QR code</strong> do Eventbrite.</li>
                 <li>Leve o QR code (impresso ou no celular) para <strong>validar a presença</strong>.</li>
                 <li>Chegue com 15 minutos de antecedência para leitura do QR code.</li>
               </ul>
-              <div class="mt-3 text-sm">
-                <a id="linkBaixar" href="https://eventbrite.com/myevent?download=ticket" target="_blank" rel="noopener" class="inline-flex items-center gap-2 underline hover:no-underline">
-                  <i data-lucide="download"></i>
-                  <span>Como baixar/recuperar meus ingressos</span>
-                </a>
-              </div>
-            </div>
-
-            <!-- Tutoriais rápidos -->
-            <div class="grid sm:grid-cols-2 gap-4">
-              <a id="linkGuiaWeb" href="https://youtube.com/SEU_VIDEO_GUIA_WEB" target="_blank" rel="noopener" class="block bg-dark-card/80 border border-white/5 rounded-2xl p-5 hover:border-ueg-gold/30 shadow-glow">
-                <div class="flex items-center gap-3">
-                  <i data-lucide="monitor-play" class="text-ueg-gold"></i>
-                  <div>
-                    <p class="font-semibold text-white">Como se inscrever (Web)</p>
-                    <p class="text-xs text-slate-400">Passo a passo no navegador</p>
-                  </div>
-                </div>
-              </a>
-              <a id="linkGuiaApp" href="https://youtube.com/SEU_VIDEO_GUIA_APP" target="_blank" rel="noopener" class="block bg-dark-card/80 border border-white/5 rounded-2xl p-5 hover:border-ueg-gold/30 shadow-glow">
-                <div class="flex items-center gap-3">
-                  <i data-lucide="smartphone" class="text-ueg-gold"></i>
-                  <div>
-                    <p class="font-semibold text-white">Como se inscrever (App)</p>
-                    <p class="text-xs text-slate-400">Passo a passo no aplicativo</p>
-                  </div>
-                </div>
-              </a>
             </div>
           </div>
         </div>
@@ -500,17 +421,16 @@
     </div>
   </footer>
 
-  <!-- Botão voltar ao topo -->
   <button id="toTop" class="fixed bottom-4 right-4 p-3 rounded-full bg-white/5 text-white border border-white/10 backdrop-blur hover:bg-white/10 opacity-0 pointer-events-none transition" aria-label="Voltar ao topo">
     <i data-lucide="arrow-up"></i>
   </button>
 
-  <script>
-    // Remover classe no-js
-    document.documentElement.classList.remove('no-js');
+  <script src="assets/js/Contador.js" defer></script>
 
+  <script>
+    document.documentElement.classList.remove('no-js');
+    
     window.addEventListener('load', () => {
-      // Inicializa ícones
       if (window.lucide && lucide.createIcons) lucide.createIcons();
 
       // Menu mobile
@@ -528,8 +448,6 @@
         }));
       }
 
-      // ================== Tabs programação ==================
-      // Suporte a clique e teclado (setas esquerda/direita)
       const tabs = Array.from(document.querySelectorAll('.tab-button'));
       const contents = Array.from(document.querySelectorAll('.tab-content'));
       function activateTab(tab){
@@ -562,7 +480,6 @@
         });
       });
 
-      // ================== Carrossel genérico (palestrantes/galeria) ==================
       function initCarousel(trackId, prevId, nextId){
         const track = document.getElementById(trackId);
         const prev = document.getElementById(prevId);
@@ -582,7 +499,6 @@
         next.addEventListener('click', () => { track.scrollBy({ left:  scrollByAmount(), behavior: 'smooth' }); });
         track.addEventListener('scroll', updateButtons, { passive:true });
 
-        // Acessibilidade via teclado
         track.setAttribute('tabindex','0');
         track.addEventListener('keydown', (e) => {
           if (e.key === 'ArrowLeft') prev.click();
@@ -592,7 +508,6 @@
       initCarousel('speakersTrack','speakersPrev','speakersNext');
       initCarousel('galleryTrack','galleryPrev','galleryNext');
 
-      // Reveal on scroll
       const io = new IntersectionObserver((entries, obs) => {
         for (const e of entries) {
           if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); }
@@ -600,7 +515,6 @@
       }, { threshold: 0.1 });
       document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-      // Voltar ao topo
       const toTop = document.getElementById('toTop');
       const onScroll = () => {
         if (window.scrollY > 300) { toTop.style.opacity = '1'; toTop.style.pointerEvents = 'auto'; }
@@ -609,7 +523,6 @@
       window.addEventListener('scroll', onScroll, { passive: true });
       toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-      // Configuração rápida dos links (edite STI_CONFIG no <head>)
       const conf = (window.STI_CONFIG && window.STI_CONFIG.links) || {};
       const map = [
         ['ctaDia1', 'dia1'],
@@ -622,7 +535,7 @@
         const el = document.getElementById(id);
         if (el && conf[key]) el.setAttribute('href', conf[key]);
       });
-    }); // <— Fim do window.load
+    });
   </script>
 </body>
 </html>
