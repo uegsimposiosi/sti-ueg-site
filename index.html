@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>UEG - Simpósio de Tecnologia da Informação</title>
-  <meta name="description" content="Simpósio de Tecnologia da Informação da UEG — programação, palestrantes, inscrições, curso de Sistemas de Informação e galeria." />
+  <meta name="description" content="Simpósio de Tecnologia da Informação da UEG — programação, palestrantes, inscrições, curso de Sistemas de Informação" />
   <meta name="theme-color" content="#0d47a1" />
 
   <!-- Open Graph / Social -->
@@ -33,10 +33,10 @@
         extend: {
           fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
           colors: {
-            'ueg-blue': '#0d47a1',
-            'ueg-blue-600': '#1e63d4',
-            'ueg-gold': '#ffab00',
-            'dark-bg': '#0b1220',
+            'ueg-blue': '#1D2362',
+            'ueg-blue-600': '#1D2362',
+            'ueg-gold': '#FFFFFF',
+            'dark-bg': '#292E63',
             'dark-card': '#121a2a'
           },
           boxShadow: {
@@ -51,8 +51,8 @@
     /* Scrollbar */
     ::-webkit-scrollbar{width:10px;height:10px}
     ::-webkit-scrollbar-track{background:#0f172a}
-    ::-webkit-scrollbar-thumb{background:#0d47a1;border-radius:9999px}
-    ::-webkit-scrollbar-thumb:hover{background:#1e63d4}
+    ::-webkit-scrollbar-thumb{background:#0b60e0;border-radius:9999px}
+    ::-webkit-scrollbar-thumb:hover{background:#0062ff}
 
     /* Animação de entrada com fallback sem JS */
     .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease, transform .7s ease}
@@ -75,7 +75,6 @@
         <a class="hover:text-white/90 text-slate-300" href="#sobre">Sobre</a>
         <a class="hover:text-white/90 text-slate-300" href="#programacao">Programação</a>
         <a class="hover:text-white/90 text-slate-300" href="#palestrantes">Palestrantes</a>
-        <a class="hover:text-white/90 text-slate-300" href="#galeria">Galeria</a>
         <a class="inline-flex items-center gap-2 bg-ueg-gold text-black font-bold px-4 py-2 rounded-full hover:bg-ueg-gold/90 focus:outline-none focus:ring-2 focus:ring-ueg-gold/40" href="#inscricao">
           <i data-lucide="ticket"></i>
           <span>Inscreva-se</span>
@@ -93,7 +92,6 @@
         <a class="block px-3 py-2 rounded-md hover:bg-white/5" href="#sobre">Sobre</a>
         <a class="block px-3 py-2 rounded-md hover:bg-white/5" href="#programacao">Programação</a>
         <a class="block px-3 py-2 rounded-md hover:bg-white/5" href="#palestrantes">Palestrantes</a>
-        <a class="block px-3 py-2 rounded-md hover:bg-white/5" href="#galeria">Galeria</a>
         <a class="mt-2 inline-flex items-center justify-center gap-2 bg-ueg-gold text-black font-bold px-4 py-2 rounded-full hover:bg-ueg-gold/90" href="#inscricao">
           <i data-lucide="ticket"></i>
           <span>Inscreva-se</span>
@@ -110,7 +108,7 @@
       </div>
       <div class="relative z-10 max-w-5xl px-4 md:px-6 text-center reveal active">
         <h1 class="text-4xl md:text-6xl font-black tracking-tight text-white">
-          Simpósio de Tecnologia da Informação
+          XIV Simpósio de Tecnologia da Informação
         </h1>
         <p class="mt-3 text-slate-300">UEG — Campus Anápolis de Ciências Exatas e Tecnológicas</p>
         <p class="mt-1 text-ueg-gold font-bold text-lg">16 a 18 de setembro</p>
@@ -327,90 +325,41 @@
         </div>
 
         <div id="speakersTrack" class="mt-6 flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4">
-          <article class="snap-start shrink-0 w-[280px] sm:w-[300px] bg-dark-card/80 border border-white/5 rounded-2xl p-8 text-center shadow-glow hover:border-ueg-gold/30 transition">
-            <img class="w-28 h-28 rounded-full mx-auto border-4 border-white/10 object-cover" src="https://placehold.co/320x320/121a2a/FFFFFF?text=AL" alt="Foto de Ana Lúcia" loading="lazy" />
-            <h3 class="mt-5 text-xl font-bold text-white">Dra. Ana Lúcia</h3>
-            <p class="text-ueg-gold font-semibold">IA — Google</p>
-            <p class="mt-2 text-sm text-slate-400">Aprendizado de máquina e ética em IA.</p>
+          <article class="snap-start shrink-0 w-[280px] sm:w-[550px] bg-dark-card/80 border border-white/5 rounded-2xl p-8 text-center shadow-glow hover:border-ueg-gold/30 transition">
+            <img class="w-28 h-28 rounded-full mx-auto border-4 border-white/10 object-cover" src="assets\images\participantes\AdrianoMarques.jpg" alt="Foto de Adriano Marques" loading="lazy" />
+            <h3 class="mt-5 text-xl font-bold text-white">Adriano Monteiro Marques</h3>
+            <p class="text-ueg-gold font-semibold">Egresso</p>
+            <p class="mt-2 text-xs text-slate-400">Graduado em Sistemas de Informação pela Universidade Estadual de Goiás, com mestrado em Ciência da Computação com especialização em Inteligência Interativa pelo Georgia Institute of Technology e uma certificação em Tecnologias Exponenciais pela Singularity University. É um especialista em TI com uma carreira marcante em liderança e inovação digital. Com um histórico comprovado na criação de startups multimilionárias e na implementação de estratégias de transformação digital, ele maximiza a agilidade e a receita dos negócios. Entre suas conquistas estão a publicação na Nature, o desenvolvimento de software em cibersegurança globalmente utilizado, o lançamento do primeiro empréstimo automático nos EUA e a criação do primeiro data center móvel otimizado por IA.</p>
           </article>
 
-          <article class="snap-start shrink-0 w-[280px] sm:w-[300px] bg-dark-card/80 border border-white/5 rounded-2xl p-8 text-center shadow-glow hover:border-ueg-gold/30 transition">
-            <img class="w-28 h-28 rounded-full mx-auto border-4 border-white/10 object-cover" src="https://placehold.co/320x320/121a2a/FFFFFF?text=MV" alt="Foto de Marcos Vilela" loading="lazy" />
-            <h3 class="mt-5 text-xl font-bold text-white">Marcos Vilela</h3>
-            <p class="text-ueg-gold font-semibold">Head de DevOps — Nubank</p>
-            <p class="mt-2 text-sm text-slate-400">Plataformas escaláveis e cultura DevOps.</p>
+          <article class="snap-start shrink-0 w-[280px] sm:w-[550px] bg-dark-card/80 border border-white/5 rounded-2xl p-8 text-center shadow-glow hover:border-ueg-gold/30 transition">
+            <img class="w-28 h-28 rounded-full mx-auto border-4 border-white/10 object-cover" src="assets\images\participantes\LucasRibeiro.jpg" alt="Foto de Lucas Ribeiro" loading="lazy" />
+            <h3 class="mt-5 text-xl font-bold text-white">Lucas de Almeida Ribeiro</h3>
+            <p class="text-ueg-gold font-semibold">Egresso</p>
+            <p class="mt-2 text-xs text-slate-400">Professor na área de engenharia e desenvolvimento de software no Instituto Federal de Goiás, Campus Luziânia. Participante do Metabotix, como professor na área de algoritmos. Doutor pela associação UFG/UFMS, tendo como área de pesquisa metaheurísticas bioinspiradas com enfoque em otimização multiobjetivo; mestre em Ciência da Computação pela UFG na área de Inteligência Computacional; e bacharel em Sistemas de Informação pela UEG. Atualmente minhas pesquisas tem ênfase em aplicações de aprendizado de máquina e deep learning em contextos variados como agricultura e ensino de informática</p>
           </article>
 
-          <article class="snap-start shrink-0 w-[280px] sm:w-[300px] bg-dark-card/80 border border-white/5 rounded-2xl p-8 text-center shadow-glow hover:border-ueg-gold/30 transition">
-            <img class="w-28 h-28 rounded-full mx-auto border-4 border-white/10 object-cover" src="https://placehold.co/320x320/121a2a/FFFFFF?text=CJ" alt="Foto de Carla Jimenez" loading="lazy" />
-            <h3 class="mt-5 text-xl font-bold text-white">Carla Jimenez</h3>
-            <p class="text-ueg-gold font-semibold">CEO — TechInova</p>
-            <p class="mt-2 text-sm text-slate-400">Empreendedora em EdTech e inovação.</p>
+          <article class="snap-start shrink-0 w-[280px] sm:w-[550px] bg-dark-card/80 border border-white/5 rounded-2xl p-8 text-center shadow-glow hover:border-ueg-gold/30 transition">
+            <img class="w-28 h-28 rounded-full mx-auto border-4 border-white/10 object-cover" src="assets\images\participantes\ValterSilva.jpg" alt="Foto de Valter Silva" loading="lazy" />
+            <h3 class="mt-5 text-xl font-bold text-white">Valter Henrique Carvalho Silva</h3>
+            <p class="text-ueg-gold font-semibold">Palestrante</p>
+            <p class="mt-2 text-xs text-slate-400">Graduado em Química Industrial pela UEG e doutor em Química pela UnB, com pós-doutorado na Universidade de Perugia. Atualmente professor da UEG, onde coordena o MphysChem Lab, o Núcleo de Computação de Alto Desempenho e o Programa de Pós-Graduação em Ciências Moleculares. Atuou também como coordenador de pesquisa no SENAI, liderando projetos tecnológicos. Sua pesquisa abrange cinética química, modelagem molecular e inteligência artificial aplicada a processos físico-químicos. Autor de mais de 80 publicações internacionais indexadas (H=23, i10=38 e 1548 citações - Google Scholar).</p>
           </article>
 
-          <article class="snap-start shrink-0 w-[280px] sm:w-[300px] bg-dark-card/80 border border-white/5 rounded-2xl p-8 text-center shadow-glow hover:border-ueg-gold/30 transition">
-            <img class="w-28 h-28 rounded-full mx-auto border-4 border-white/10 object-cover" src="https://placehold.co/320x320/121a2a/FFFFFF?text=RB" alt="Foto de Roberta Braga" loading="lazy" />
-            <h3 class="mt-5 text-xl font-bold text-white">Roberta Braga</h3>
-            <p class="text-ueg-gold font-semibold">Segurança — CISO</p>
-            <p class="mt-2 text-sm text-slate-400">Gestão de riscos e resposta a incidentes.</p>
+          <article class="snap-start shrink-0 w-[280px] sm:w-[550px] bg-dark-card/80 border border-white/5 rounded-2xl p-8 text-center shadow-glow hover:border-ueg-gold/30 transition">
+            <img class="w-28 h-28 rounded-full mx-auto border-4 border-white/10 object-cover" src="assets\images\participantes\NoeliVaz.jpg" alt="Foto de Noeli Vaz" loading="lazy" />
+            <h3 class="mt-5 text-xl font-bold text-white">Noeli Antônia Pimentel Vaz</h3>
+            <p class="text-ueg-gold font-semibold">Palestrante</p>
+            <p class="mt-2 text-xs text-slate-400">Professora da Universidade Estadual de Goiás (UEG), com atuação no ensino presencial e EaD (graduação e pós graduação). Graduada em Tecnologia em Processamento de Dados pela UEG, mestre em Engenharia de Produção e Sistemas pela PUC-GO e doutoranda em Ciência da Computação pelo Instituto de Informática da UFG. Atuou como pesquisadora no projeto “Web 3.0 — Avaliação de Impacto da Web 3.0: Descentralizada, Imersiva, Semântica, Centrada no Usuário e Conectada com o Mundo Ciberfísico” (ANATEL/UFG) e no Programa de Incubação de Empresas-  InovaLab (UFMG). Atualmente é pesquisadora do Laboratório de Jogos, Informática e Saúde (LabJIS/INF) e atua no projeto IUProst, desenvolvido em parceria com a Escola de Enfermagem da UFMG.</p>
           </article>
 
-          <article class="snap-start shrink-0 w-[280px] sm:w-[300px] bg-dark-card/80 border border-white/5 rounded-2xl p-8 text-center shadow-glow hover:border-ueg-gold/30 transition">
-            <img class="w-28 h-28 rounded-full mx-auto border-4 border-white/10 object-cover" src="https://placehold.co/320x320/121a2a/FFFFFF?text=TS" alt="Foto de Tiago Souza" loading="lazy" />
-            <h3 class="mt-5 text-xl font-bold text-white">Tiago Souza</h3>
-            <p class="text-ueg-gold font-semibold">Dados — iFood</p>
-            <p class="mt-2 text-sm text-slate-400">Engenharia de dados e MLOps.</p>
-          </article>
-
-          <article class="snap-start shrink-0 w-[280px] sm:w-[300px] bg-dark-card/80 border border-white/5 rounded-2xl p-8 text-center shadow-glow hover:border-ueg-gold/30 transition">
-            <img class="w-28 h-28 rounded-full mx-auto border-4 border-white/10 object-cover" src="https://placehold.co/320x320/121a2a/FFFFFF?text=EF" alt="Foto de Elisa Freitas" loading="lazy" />
-            <h3 class="mt-5 text-xl font-bold text-white">Elisa Freitas</h3>
-            <p class="text-ueg-gold font-semibold">UX — TOTVS</p>
-            <p class="mt-2 text-sm text-slate-400">Pesquisa com usuários e acessibilidade.</p>
-          </article>
         </div>
       </div>
     </section>
 
-    <section id="galeria" class="scroll-mt-24 py-20 md:py-28 bg-dark-card/60">
-      <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 reveal">
-        <div class="text-center max-w-3xl mx-auto">
-          <h2 class="text-3xl md:text-5xl font-extrabold text-white">Galeria</h2>
-          <p class="mt-3 text-slate-400">Momentos marcantes de edições anteriores.</p>
-        </div>
+    
 
-        <div class="mt-8 flex items-center justify-between">
-          <button id="galleryPrev" class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 focus:ring-2 focus:ring-white/20" aria-label="Imagens anteriores">
-            <i data-lucide="arrow-left"></i><span class="hidden sm:inline">Anterior</span>
-          </button>
-          <div class="text-sm text-slate-400">Arraste ou use os botões</div>
-          <button id="galleryNext" class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 focus:ring-2 focus:ring-white/20" aria-label="Próximas imagens">
-            <span class="hidden sm:inline">Próximo</span><i data-lucide="arrow-right"></i>
-          </button>
-        </div>
-
-        <div id="galleryTrack" class="mt-6 flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-2">
-          <figure class="snap-start shrink-0 w-[280px] h-[200px] sm:w-[360px] sm:h-[240px] overflow-hidden rounded-xl border border-white/5 shadow-glow">
-            <img class="w-full h-full object-cover hover:scale-105 transition" src="https://placehold.co/800x600/0d47a1/FFFFFF?text=STI+2024" alt="Público do STI 2024" loading="lazy" />
-          </figure>
-
-          <figure class="snap-start shrink-0 w-[280px] h-[200px] sm:w-[360px] sm:h-[240px] overflow-hidden rounded-xl border border-white/5 shadow-glow">
-            <img class="w-full h-full object-cover hover:scale-105 transition" src="https://placehold.co/800x600/ffab00/111827?text=STI" alt="Palestra em auditório" loading="lazy" />
-          </figure>
-          <figure class="snap-start shrink-0 w-[280px] h-[200px] sm:w-[360px] sm:h-[240px] overflow-hidden rounded-xl border border-white/5 shadow-glow">
-            <img class="w-full h-full object-cover hover:scale-105 transition" src="https://placehold.co/800x600/1f2937/FFFFFF?text=UEG" alt="Campus UEG" loading="lazy" />
-          </figure>
-          <figure class="snap-start shrink-0 w-[280px] h-[200px] sm:w-[360px] sm:h-[240px] overflow-hidden rounded-xl border border-white/5 shadow-glow">
-            <img class="w-full h-full object-cover hover:scale-105 transition" src="https://placehold.co/800x600/1e63d4/FFFFFF?text=Tech" alt="Workshop prático" loading="lazy" />
-          </figure>
-          <figure class="snap-start shrink-0 w-[280px] h-[200px] sm:w-[360px] sm:h-[240px] overflow-hidden rounded-xl border border-white/5 shadow-glow">
-            <img class="w-full h-full object-cover hover:scale-105 transition" src="https://placehold.co/800x600/b37a00/FFFFFF?text=Talks" alt="Painel de discussão" loading="lazy" />
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <section id="inscricao" class="scroll-mt-24 py-20 md:py-28">
+    <section id="inscricao" class="scroll-mt-24 py-20 md:py-28 bg-dark-card/60">
       <div class="max-w-5xl mx-auto px-4 md:px-6 lg:px-8 reveal">
         <div class="text-center max-w-3xl mx-auto">
           <h2 class="text-3xl md:text-5xl font-extrabold text-white">Inscrições</h2>
@@ -472,9 +421,10 @@
 
   <footer class="bg-dark-card border-t border-white/5 text-slate-400 py-10">
     <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 text-center">
-      <p class="text-white font-bold">Simpósio de Tecnologia da Informação — STI UEG</p>
+      <p class="text-white font-bold">XIV Simpósio de Tecnologia da Informação — STI UEG</p>
       <p class="mt-1">Universidade Estadual de Goiás — Câmpus Anápolis de Ciências Exatas e Tecnológicas</p>
-      <p class="mt-6 text-xs">&copy; 2025 STI UEG. Todos os direitos reservados.</p>
+      <p class="mt-6 text-xs"><a href="https://sites.google.com/ueg.br/simpsio-2024/in%C3%ADcio" target="_blank" rel="noopener noreferrer">Consulte o site da edição anterior (2024)</a>
+</p>
     </div>
   </footer>
 
