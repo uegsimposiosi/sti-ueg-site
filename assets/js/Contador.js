@@ -1,25 +1,31 @@
 document.addEventListener("DOMContentLoaded", () => {
   const contador = document.getElementById("contador");
 
-  const targetDate = new Date("2025-09-16T19:00:00").getTime();
+  const startDate = new Date("2025-09-16T19:00:00").getTime();
+  const endDate = new Date("2025-09-19T00:00:00").getTime();
 
   function updateCountdown() {
     const now = new Date().getTime();
-    const diff = targetDate - now;
 
-    if (diff <= 0) {
-      contador.innerHTML = "O simpósio já começou!";
+    if (now >= endDate) {
+      contador.innerHTML = "O simpósio acabou, até o próximo ano!";
       clearInterval(timer);
       return;
     }
+
+    if (now >= startDate) {
+      contador.innerHTML = "O simpósio já começou!";
+      return;
+    }
+
+    const diff = startDate - now;
 
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
     const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-    contador.innerHTML =
-    `
+    contador.innerHTML = `
         Faltam
         <span class="font-bold">${days}</span>d 
         <span class="font-bold">${hours}</span>h 
