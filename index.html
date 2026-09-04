@@ -18,6 +18,7 @@
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind-config.js"></script>
 
   <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,38 +28,8 @@
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@0.453.0/dist/umd/lucide.js" defer></script>
 
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
-          colors: {
-            'ueg-blue': '#1D2362',
-            'ueg-gold': '#FFFFFF',
-            'dark-bg': '#292E63',
-            'dark-card': '#121a2a'
-          },
-          boxShadow: {
-            glow: '0 0 0 1px rgba(255,255,255,0.04), 0 10px 30px rgba(0,0,0,0.35)'
-          }
-        }
-      }
-    }
-  </script>
-
-  <style>
-    /* Scrollbar */
-    ::-webkit-scrollbar{width:10px;height:10px}
-    ::-webkit-scrollbar-track{background:#0f172a}
-    ::-webkit-scrollbar-thumb{background:#0b60e0;border-radius:9999px}
-    ::-webkit-scrollbar-thumb:hover{background:#0062ff}
-
-    /* Animação de entrada com fallback sem JS */
-    .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease, transform .7s ease}
-    .reveal.active{opacity:1;transform:none}
-    .no-js .reveal{opacity:1;transform:none}
-    @media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none}}
-  </style>  
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 
 <body class="bg-dark-bg text-slate-200 font-sans selection:bg-ueg-gold selection:text-black">
@@ -111,10 +82,11 @@
       </div>
       <div class="relative z-10 max-w-5xl px-4 md:px-6 text-center reveal active">
         <h1 class="text-4xl md:text-6xl font-black tracking-tight text-white">
-          XIV Simpósio de Tecnologia da Informação
+          XV Simpósio de Tecnologia da Informação
         </h1>
+        <p class="mt-2 text-slate-400 text-sm md:text-base">XVIII Semana de Iniciação Científica do Curso de Sistemas de Informação</p>
         <p class="mt-3 text-slate-300">UEG — Campus Anápolis de Ciências Exatas e Tecnológicas</p>
-        <p class="mt-1 text-ueg-gold font-bold text-lg">16 a 18 de setembro</p>
+        <p class="mt-1 text-ueg-gold font-bold text-lg">15 a 17 de setembro de 2026</p>
         <p id="contador" class="mt-1 text-ueg-gold font-bold text-lg"></p>
 
         <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
@@ -171,23 +143,32 @@
           <div class="mt-10 max-w-4xl mx-auto">
               <div class="flex justify-center gap-2 border-b border-white/10" role="tablist" aria-label="Dias do evento">
                   <button id="tab-dia1" class="tab-button px-5 py-3 text-sm sm:text-base font-semibold text-ueg-gold border-b-2 border-ueg-gold"
-                      role="tab" aria-selected="true" aria-controls="content-dia1">Dia 1<br>16/Set</button>
+                      role="tab" aria-selected="true" aria-controls="content-dia1">Dia 1<br>15/Set</button>
                   <button id="tab-dia2" class="tab-button px-5 py-3 text-sm sm:text-base font-semibold text-slate-300 border-b-2 border-transparent hover:text-white"
-                      role="tab" aria-selected="false" aria-controls="content-dia2">Dia 2<br>17/Set</button>
+                      role="tab" aria-selected="false" aria-controls="content-dia2">Dia 2<br>16/Set</button>
                   <button id="tab-dia3" class="tab-button px-5 py-3 text-sm sm:text-base font-semibold text-slate-300 border-b-2 border-transparent hover:text-white"
-                      role="tab" aria-selected="false" aria-controls="content-dia3">Dia 3<br>18/Set</button>
+                      role="tab" aria-selected="false" aria-controls="content-dia3">Dia 3<br>17/Set</button>
               </div>
 
               <div id="content-dia1" class="tab-content space-y-4 pt-6" role="tabpanel" tabindex="0" aria-labelledby="tab-dia1">
+                  <div class="flex items-start gap-4 bg-white/5 rounded-xl p-5 border border-white/5">
+                      <div class="shrink-0 w-16 h-16 grid place-items-center rounded-lg bg-ueg-blue/20">
+                          <i data-lucide="presentation"></i>
+                      </div>
+                      <div class="grow">
+                          <h3 class="text-white font-bold">Colocação dos banners no Hall do CCET</h3>
+                          <p class="text-slate-400 text-sm">Hall do CCET</p>
+                          <p class="text-slate-400 text-sm">Até as 18:30</p>
+                      </div>
+                  </div>
                   <div class="flex items-start gap-4 bg-white/5 rounded-xl p-5 border border-white/5">
                       <div class="shrink-0 w-16 h-16 grid place-items-center rounded-lg bg-ueg-blue/20">
                           <i data-lucide="megaphone"></i>
                       </div>
                       <div class="grow">
                           <h3 class="text-white font-bold">Abertura do evento</h3>
-                          <p class="text-slate-400 text-sm">Coordenador do Câmpus Prof. Elton, Coordenador do Curso Prof. Joilson e Coordenador do Evento Prof. Márcio</p>
-                          <p class="text-slate-400 text-sm">Auditório</p>
-                          <p class="text-slate-400 text-sm">19:15 às 19:45</p>
+                          <p class="text-slate-400 text-sm">Diretora do IACT, Coordenador do Câmpus, Coordenador do Curso (Prof. Márcio) e Coordenação do evento (Prof. José Leonardo)</p>
+                          <p class="text-slate-400 text-sm">19:30 às 20:00</p>
                       </div>
                   </div>
                   <div class="flex items-start gap-4 bg-white/5 rounded-xl p-5 border border-white/5">
@@ -195,21 +176,9 @@
                           <i data-lucide="mic"></i>
                       </div>
                       <div class="grow">
-                          <h3 class="text-white font-bold">Palestra sobre “Dados, Códigos e Ciências Moleculares: Do Status Quo às Novas Fronteiras da Química Teórica”</h3>
-                          <p class="text-slate-400 text-sm">Prof. Dr. Valter Henrique Carvalho Silva</p>
-                          <p class="text-slate-400 text-sm">Auditório</p>
-                          <p class="text-slate-400 text-sm">19:45 às 21:00</p>
-                      </div>
-                  </div>
-                  <div class="flex items-start gap-4 bg-white/5 rounded-xl p-5 border border-white/5">
-                      <div class="shrink-0 w-16 h-16 grid place-items-center rounded-lg bg-ueg-blue/20">
-                          <i data-lucide="graduation-cap"></i>
-                      </div>
-                      <div class="grow">
-                          <h3 class="text-white font-bold">Minicurso sobre "Fundamentos de Engenharia de prompts para IAs"</h3>
-                          <p class="text-slate-400 text-sm">Discente Marcos Antônio</p>
-                          <p class="text-slate-400 text-sm">Laboratório 3</p>
-                          <p class="text-slate-400 text-sm">21:10 às 22:30</p>
+                          <h3 class="text-white font-bold">Palestra sobre "Jornada de Inovação e IA no estado de Goiás: como avançamos e como estamos aplicando isso na prática passando por big data?"</h3>
+                          <p class="text-slate-400 text-sm">Alaor José da Silva Junior</p>
+                          <p class="text-slate-400 text-sm">20:00 às 21:20</p>
                       </div>
                   </div>
                   <div class="flex items-start gap-4 bg-white/5 rounded-xl p-5 border border-white/5">
@@ -217,8 +186,19 @@
                           <i data-lucide="presentation"></i>
                       </div>
                       <div class="grow">
-                          <h3 class="text-white font-bold">Apresentação de pôsteres</h3>
-                          <p class="text-slate-400 text-sm">21:10 às 22:30</p>
+                          <h3 class="text-white font-bold">Comunicação oral</h3>
+                          <p class="text-slate-400 text-sm">3 apresentações</p>
+                          <p class="text-slate-400 text-sm">Auditório</p>
+                          <p class="text-slate-400 text-sm">21:30 às 22:10</p>
+                      </div>
+                  </div>
+                  <div class="flex items-start gap-4 bg-white/5 rounded-xl p-5 border border-dashed border-white/15">
+                      <div class="shrink-0 w-16 h-16 grid place-items-center rounded-lg bg-ueg-blue/20">
+                          <i data-lucide="sparkles"></i>
+                      </div>
+                      <div class="grow">
+                          <h3 class="text-white font-bold">...e mais</h3>
+                          <p class="text-slate-400 text-sm">Programação em finalização. Novos nomes, temas e horários serão divulgados em breve.</p>
                       </div>
                   </div>
               </div>
@@ -229,120 +209,92 @@
                           <i data-lucide="presentation"></i>
                       </div>
                       <div class="grow">
-                          <h3 class="text-white font-bold">Sessão de pôsteres da Semana de Iniciação Científica</h3>
-                          <p class="text-slate-400 text-sm">19:00 às 19:40</p>
+                          <h3 class="text-white font-bold">Semana de Iniciação Científica — Sessão de pôsteres (banner)</h3>
+                          <p class="text-slate-400 text-sm">Hall do CCET</p>
+                          <p class="text-slate-400 text-sm">19:00 às 19:45</p>
                       </div>
                   </div>
-
                   <div class="flex items-start gap-4 bg-white/5 rounded-xl p-5 border border-white/5">
                       <div class="shrink-0 w-16 h-16 grid place-items-center rounded-lg bg-ueg-blue/20">
                           <i data-lucide="mic"></i>
                       </div>
                       <div class="grow">
-                          <h3 class="text-white font-bold">Palestra sobre "Computação em Saúde Digital: LLMs para personalização em mHealth"</h3>
-                          <p class="text-slate-400 text-sm">Prof. Noeli</p>
-                          <p class="text-slate-400 text-sm">Auditório</p>
-                          <p class="text-slate-400 text-sm">19:45 às 20:25</p>
+                          <h3 class="text-white font-bold">Palestra sobre "IA e Ciência: a nova fronteira da escrita acadêmica"</h3>
+                          <p class="text-slate-400 text-sm">Prof. Olira Saraiva Rodrigues</p>
+                          <p class="text-slate-400 text-sm">19:50 às 20:45</p>
                       </div>
                   </div>
-
                   <div class="flex items-start gap-4 bg-white/5 rounded-xl p-5 border border-white/5">
                       <div class="shrink-0 w-16 h-16 grid place-items-center rounded-lg bg-ueg-blue/20">
                           <i data-lucide="message-circle"></i>
                       </div>
                       <div class="grow">
                           <h3 class="text-white font-bold">Mesa redonda e relatos de experiência</h3>
-                          <p class="text-slate-400 text-sm">Egressos Adriano Monteiro Marques, Lucas de Almeida Ribeiro e Joseph Antonio Isbir Filho</p>
-                          <p class="text-slate-400 text-sm">Auditório</p>
-                          <p class="text-slate-400 text-sm">20:40 às 21:40</p>
+                          <p class="text-slate-400 text-sm">Egressos Caio, Gabriel Nunes e Cleon (on-line)</p>
+                          <p class="text-slate-400 text-sm">21:00 às 22:10</p>
+                      </div>
+                  </div>
+                  <div class="flex items-start gap-4 bg-white/5 rounded-xl p-5 border border-dashed border-white/15">
+                      <div class="shrink-0 w-16 h-16 grid place-items-center rounded-lg bg-ueg-blue/20">
+                          <i data-lucide="sparkles"></i>
+                      </div>
+                      <div class="grow">
+                          <h3 class="text-white font-bold">...e mais</h3>
+                          <p class="text-slate-400 text-sm">Programação em finalização. Novos nomes, temas e horários serão divulgados em breve.</p>
                       </div>
                   </div>
               </div>
 
               <div id="content-dia3" class="tab-content space-y-4 pt-6 hidden" role="tabpanel" tabindex="0" aria-labelledby="tab-dia3">
                   <div class="flex items-start gap-4 bg-white/5 rounded-xl p-5 border border-white/5">
-                        <div class="shrink-0 w-16 h-16 grid place-items-center rounded-lg bg-ueg-blue/20">
-                            <i data-lucide="palette"></i>
+                      <div class="shrink-0 w-16 h-16 grid place-items-center rounded-lg bg-ueg-blue/20">
+                          <i data-lucide="presentation"></i>
                       </div>
                       <div class="grow">
-                          <h3 class="text-white font-bold">Apresentação cultural</h3>
-                          <p class="text-slate-400 text-sm">Auditório</p>
-                          <p class="text-slate-400 text-sm">19:00 às 19:35</p>
-                        </div>
+                          <h3 class="text-white font-bold">Semana de Iniciação Científica — Sessão de pôsteres (banner)</h3>
+                          <p class="text-slate-400 text-sm">Hall do CCET</p>
+                          <p class="text-slate-400 text-sm">19:00 às 19:40</p>
+                      </div>
                   </div>
-
+                  <div class="flex items-start gap-4 bg-white/5 rounded-xl p-5 border border-white/5">
+                      <div class="shrink-0 w-16 h-16 grid place-items-center rounded-lg bg-ueg-blue/20">
+                          <i data-lucide="presentation"></i>
+                      </div>
+                      <div class="grow">
+                          <h3 class="text-white font-bold">Semana de Iniciação Científica — Comunicação oral</h3>
+                          <p class="text-slate-400 text-sm">Apresentação de artigos — três apresentações</p>
+                          <p class="text-slate-400 text-sm">19:40 às 20:15</p>
+                      </div>
+                  </div>
                   <div class="flex items-start gap-4 bg-white/5 rounded-xl p-5 border border-white/5">
                       <div class="shrink-0 w-16 h-16 grid place-items-center rounded-lg bg-ueg-blue/20">
                           <i data-lucide="mic"></i>
                       </div>
                       <div class="grow">
-                          <h3 class="text-white font-bold">Telemetria e Ciência de Dados nas Operações Agrícolas: Análise sistemática de abordagens para eficiência operacional e apoio ao planejamento rural</h3>
-                          <p class="text-slate-400 text-sm">Discente Rafael Guibson</p>
-                          <p class="text-slate-400 text-sm">Auditório</p>
-                          <p class="text-slate-400 text-sm">19:40 às 20:00</p>
+                          <h3 class="text-white font-bold">Palestra sobre "Mercado de trabalho: as novas e velhas competências para a Indústria 5.0"</h3>
+                          <p class="text-slate-400 text-sm">Paulo Henrique de Freitas Miranda</p>
+                          <p class="text-slate-400 text-sm">20:15 às 21:00</p>
                       </div>
                   </div>
-
                   <div class="flex items-start gap-4 bg-white/5 rounded-xl p-5 border border-white/5">
                       <div class="shrink-0 w-16 h-16 grid place-items-center rounded-lg bg-ueg-blue/20">
-                          <i data-lucide="mic"></i>
+                          <i data-lucide="message-circle"></i>
                       </div>
                       <div class="grow">
-                          <h3 class="text-white font-bold">Predição de HMI e HMD por Algoritmo de Machine Learning: Análise baseada em dados clínicos e históricos</h3>
-                          <p class="text-slate-400 text-sm">Discente Lucas Apparecido de Oliveira</p>
-                          <p class="text-slate-400 text-sm">Auditório</p>
-                          <p class="text-slate-400 text-sm">20:00 às 20:20</p>
+                          <h3 class="text-white font-bold">Mesa redonda: apresentação de projetos e linhas de pesquisa para orientação de TC / IC</h3>
+                          <p class="text-slate-400 text-sm">Coordenação: Prof. José Leonardo, com os professores presentes</p>
+                          <p class="text-slate-400 text-sm">21:00 às 22:00</p>
                       </div>
                   </div>
-
-                  <div class="flex items-start gap-4 bg-white/5 rounded-xl p-5 border border-white/5">
+                  <div class="flex items-start gap-4 bg-white/5 rounded-xl p-5 border border-dashed border-white/15">
                       <div class="shrink-0 w-16 h-16 grid place-items-center rounded-lg bg-ueg-blue/20">
-                          <i data-lucide="mic"></i>
+                          <i data-lucide="sparkles"></i>
                       </div>
                       <div class="grow">
-                          <h3 class="text-white font-bold">Elaboração de um processo de formação de léxico computacional assistido por LLM</h3>
-                          <p class="text-slate-400 text-sm">Discente Lucas Apparecido de Oliveira</p>
-                          <p class="text-slate-400 text-sm">Auditório</p>
-                          <p class="text-slate-400 text-sm">20:20 às 20:40</p>
+                          <h3 class="text-white font-bold">...e mais</h3>
+                          <p class="text-slate-400 text-sm">Programação em finalização. Novos nomes, temas e horários serão divulgados em breve.</p>
                       </div>
                   </div>
-
-                  <div class="flex items-start gap-4 bg-white/5 rounded-xl p-5 border border-white/5">
-                      <div class="shrink-0 w-16 h-16 grid place-items-center rounded-lg bg-ueg-blue/20">
-                          <i data-lucide="mic"></i>
-                      </div>
-                      <div class="grow">
-                          <h3 class="text-white font-bold">SOS Consultor: Um jogo digital da categoria serious games para estimular a aprendizagem ativa e lúdica da educação financeira pessoal em adultos com idade entre 26 e 60 anos no Brasil</h3>
-                          <p class="text-slate-400 text-sm">Discente Johnathan Rafael Pereira</p>
-                          <p class="text-slate-400 text-sm">Auditório</p>
-                          <p class="text-slate-400 text-sm">20:40 às 21:00</p>
-                      </div>
-                  </div>
-
-                  <div class="flex items-start gap-4 bg-white/5 rounded-xl p-5 border border-white/5">
-                      <div class="shrink-0 w-16 h-16 grid place-items-center rounded-lg bg-ueg-blue/20">
-                          <i data-lucide="mic"></i>
-                      </div>
-                      <div class="grow">
-                          <h3 class="text-white font-bold">Padrões de perfis de vagas em Tecnologia da Informação: A Inteligência Artificial Generativa como facilitadora na busca por perfis de profissionais</h3>
-                          <p class="text-slate-400 text-sm">Discente Marcos Antônio Barbosa de Souza</p>
-                          <p class="text-slate-400 text-sm">Auditório</p>
-                          <p class="text-slate-400 text-sm">21:00 às 21:20</p>
-                      </div>
-                  </div>
-
-                  <div class="flex items-start gap-4 bg-white/5 rounded-xl p-5 border border-white/5">
-                      <div class="shrink-0 w-16 h-16 grid place-items-center rounded-lg bg-ueg-blue/20">
-                          <i data-lucide="mic"></i>
-                      </div>
-                      <div class="grow">
-                          <h3 class="text-white font-bold">Aplicações da inteligência artificial na análise de desempenho de atletas em esportes: Os impactos no futebol</h3>
-                          <p class="text-slate-400 text-sm">Discente Matheus Rego Cruz</p>
-                          <p class="text-slate-400 text-sm">Auditório</p>
-                          <p class="text-slate-400 text-sm">21:20 às 21:40</p>
-                      </div>
-                  </div>
-
               </div>
 
           </div>
@@ -356,59 +308,12 @@
           <p class="mt-3 text-slate-400">Mentes que estão moldando o futuro da tecnologia.</p>
         </div>
 
-        <div class="mt-8 flex items-center justify-between">
-          <button id="speakersPrev" class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 focus:ring-2 focus:ring-white/20" aria-label="Palestrantes anteriores">
-            <i data-lucide="arrow-left"></i><span class="hidden sm:inline">Anterior</span>
-          </button>
-          <div class="text-sm text-slate-400">Arraste lateralmente ou use os botões</div>
-          <button id="speakersNext" class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 focus:ring-2 focus:ring-white/20" aria-label="Próximos palestrantes">
-            <span class="hidden sm:inline">Próximo</span><i data-lucide="arrow-right"></i>
-          </button>
-        </div>
-
-        <div id="speakersTrack" class="mt-6 flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4">
-          <article class="snap-start shrink-0 w-[280px] sm:w-[550px] bg-dark-card/80 border border-white/5 rounded-2xl p-8 text-center shadow-glow hover:border-ueg-gold/30 transition">
-            <img class="w-28 h-28 rounded-full mx-auto border-4 border-white/10 object-cover" src="assets\images\participantes\ValterSilva.jpg" alt="Foto de Valter Silva" loading="eager" />
-            <h3 class="mt-5 text-xl font-bold text-white">Valter Henrique Carvalho Silva</h3>
-            <p class="text-ueg-gold font-semibold">Palestrante</p>
-            <p class="mt-2 text-xs text-slate-400">Graduado em Química Industrial pela UEG e doutor em Química pela UnB, com pós-doutorado na Universidade de Perugia. Atualmente professor da UEG, onde coordena o MphysChem Lab, o Núcleo de Computação de Alto Desempenho e o Programa de Pós-Graduação em Ciências Moleculares. Atuou também como coordenador de pesquisa no SENAI, liderando projetos tecnológicos. Sua pesquisa abrange cinética química, modelagem molecular e inteligência artificial aplicada a processos físico-químicos. Autor de mais de 80 publicações internacionais indexadas (H=23, i10=38 e 1548 citações - Google Scholar).</p>
-          </article>
-
-          <article class="snap-start shrink-0 w-[280px] sm:w-[550px] bg-dark-card/80 border border-white/5 rounded-2xl p-8 text-center shadow-glow hover:border-ueg-gold/30 transition">
-            <img class="w-28 h-28 rounded-full mx-auto border-4 border-white/10 object-cover" src="assets\images\participantes\NoeliVaz.jpg" alt="Foto de Noeli Vaz" loading="eager" />
-            <h3 class="mt-5 text-xl font-bold text-white">Noeli Antônia Pimentel Vaz</h3>
-            <p class="text-ueg-gold font-semibold">Palestrante</p>
-            <p class="mt-2 text-xs text-slate-400">Professora da Universidade Estadual de Goiás (UEG), com atuação no ensino presencial e EaD (graduação e pós graduação). Graduada em Tecnologia em Processamento de Dados pela UEG, mestre em Engenharia de Produção e Sistemas pela PUC-GO e doutoranda em Ciência da Computação pelo Instituto de Informática da UFG. Atuou como pesquisadora no projeto “Web 3.0 — Avaliação de Impacto da Web 3.0: Descentralizada, Imersiva, Semântica, Centrada no Usuário e Conectada com o Mundo Ciberfísico” (ANATEL/UFG) e no Programa de Incubação de Empresas-  InovaLab (UFMG). Atualmente é pesquisadora do Laboratório de Jogos, Informática e Saúde (LabJIS/INF) e atua no projeto IUProst, desenvolvido em parceria com a Escola de Enfermagem da UFMG.</p>
-          </article>
-
-          <article class="snap-start shrink-0 w-[280px] sm:w-[550px] bg-dark-card/80 border border-white/5 rounded-2xl p-8 text-center shadow-glow hover:border-ueg-gold/30 transition">
-            <img class="w-28 h-28 rounded-full mx-auto border-4 border-white/10 object-cover" src="assets\images\participantes\Elton.jpg" alt="Foto de Elton Fialho" loading="eager" />
-            <h3 class="mt-5 text-xl font-bold text-white">Elton Fialho Reis</h3>
-            <p class="text-ueg-gold font-semibold">Palestrante</p>
-            <p class="mt-2 text-xs text-slate-400">Doutor em Engenharia Agrícola pela Universidade Federal de Viçosa. Docente de Ensino Superior da Universidade Estadual de Goiás Câmpus Central - Sede Anápolis CET, desde 2004; Coordena disciplinas na área de máquinas agrícolas na graduação e  no mestrado em Engenharia Agrícola.  Orienta alunos na Graduação e no Mestrado em Engenharia Agrícola. Atualmente é coordenador do Campus Central: sede - Anápolis de Ciências Exatas e Tecnológicas da Universidade Estadual de Goiás.</p>
-          </article>
-
-          <article class="snap-start shrink-0 w-[280px] sm:w-[550px] bg-dark-card/80 border border-white/5 rounded-2xl p-8 text-center shadow-glow hover:border-ueg-gold/30 transition">
-            <img class="w-28 h-28 rounded-full mx-auto border-4 border-white/10 object-cover" src="assets\images\participantes\AdrianoMarques.jpg" alt="Foto de Adriano Marques" loading="eager" />
-            <h3 class="mt-5 text-xl font-bold text-white">Adriano Monteiro Marques</h3>
-            <p class="text-ueg-gold font-semibold">Egresso</p>
-            <p class="mt-2 text-xs text-slate-400">Graduado em Sistemas de Informação pela Universidade Estadual de Goiás, com mestrado em Ciência da Computação com especialização em Inteligência Interativa pelo Georgia Institute of Technology e uma certificação em Tecnologias Exponenciais pela Singularity University. É um especialista em TI com uma carreira marcante em liderança e inovação digital. Com um histórico comprovado na criação de startups multimilionárias e na implementação de estratégias de transformação digital, ele maximiza a agilidade e a receita dos negócios. Entre suas conquistas estão a publicação na Nature, o desenvolvimento de software em cibersegurança globalmente utilizado, o lançamento do primeiro empréstimo automático nos EUA e a criação do primeiro data center móvel otimizado por IA.</p>
-          </article>
-
-          <article class="snap-start shrink-0 w-[280px] sm:w-[550px] bg-dark-card/80 border border-white/5 rounded-2xl p-8 text-center shadow-glow hover:border-ueg-gold/30 transition">
-            <img class="w-28 h-28 rounded-full mx-auto border-4 border-white/10 object-cover" src="assets\images\participantes\LucasRibeiro.jpg" alt="Foto de Lucas Ribeiro" loading="eager" />
-            <h3 class="mt-5 text-xl font-bold text-white">Lucas de Almeida Ribeiro</h3>
-            <p class="text-ueg-gold font-semibold">Egresso</p>
-            <p class="mt-2 text-xs text-slate-400">Professor na área de engenharia e desenvolvimento de software no Instituto Federal de Goiás, Campus Luziânia. Participante do Metabotix, como professor na área de algoritmos. Doutor pela associação UFG/UFMS, tendo como área de pesquisa metaheurísticas bioinspiradas com enfoque em otimização multiobjetivo; mestre em Ciência da Computação pela UFG na área de Inteligência Computacional; e bacharel em Sistemas de Informação pela UEG. Atualmente minhas pesquisas tem ênfase em aplicações de aprendizado de máquina e deep learning em contextos variados como agricultura e ensino de informática</p>
-          </article>
-
-          <article class="snap-start shrink-0 w-[280px] sm:w-[550px] bg-dark-card/80 border border-white/5 rounded-2xl p-8 text-center shadow-glow hover:border-ueg-gold/30 transition">
-            <img class="w-28 h-28 rounded-full mx-auto border-4 border-white/10 object-cover" src="assets\images\participantes\Joseph.jpg" alt="Foto de Joseph Isbir" loading="eager" />
-            <h3 class="mt-5 text-xl font-bold text-white">Joseph Antonio Isbir Filho</h3>
-            <p class="text-ueg-gold font-semibold">Egresso</p>
-            <p class="mt-2 text-xs text-slate-400">Graduado em Sistemas de Informação pela Universidade Estadual de Goiás, com pós-graduação em Gestão e Desenvolvimento de Sistemas de Informação. Atua há mais de 15 anos como desenvolvedor de software, com experiência em empresas nacionais e internacionais. Especialista em Java e tecnologias relacionadas, participou de projetos de grande porte em instituições como Banco do Brasil, Banco Central, Ministério da Saúde, ANVISA e Petrobras.</p>
-          </article>
-          
+        <div class="mt-12 flex flex-col items-center text-center bg-dark-card/80 border border-white/5 rounded-2xl p-12 md:p-16 shadow-glow">
+          <span class="grid place-items-center w-16 h-16 rounded-full bg-ueg-gold/10 text-ueg-gold">
+            <i data-lucide="users"></i>
+          </span>
+          <h3 class="mt-6 text-2xl md:text-3xl font-bold text-white">Em breve...</h3>
+          <p class="mt-2 max-w-md text-slate-400">Estamos finalizando a curadoria dos palestrantes desta edição. Volte logo para conferir as confirmações.</p>
         </div>
       </div>
     </section>
@@ -418,7 +323,7 @@
       <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 reveal">
         <div class="text-center max-w-3xl mx-auto">
           <h2 class="text-3xl md:text-5xl font-extrabold text-white">Galeria</h2>
-          <p class="mt-3 text-slate-400">Momentos marcantes da edição</p>
+          <p class="mt-3 text-slate-400">Os melhores momentos da edição do ano passado</p>
         </div>
 
         <div id="galleryTrack" class="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pb-2">
@@ -539,7 +444,7 @@
         <div class="mt-10 grid lg:grid-cols-5 gap-6">
           <aside class="lg:col-span-2 bg-dark-card/80 border border-white/5 rounded-2xl p-6 shadow-glow">
             <ul class="mt-4 space-y-3 text-sm text-slate-300">
-              <li class="flex items-start gap-2"><i data-lucide="calendar" class="mt-0.5"></i> 16 a 18 de setembro</li>
+              <li class="flex items-start gap-2"><i data-lucide="calendar" class="mt-0.5"></i> 15 a 17 de setembro</li>
               <li class="flex items-start gap-2"><i data-lucide="map-pin" class="mt-0.5"></i> UEG — Câmpus Anápolis de Ciências Exatas e Tecnológicas</li>
               <div class="mt-3 rounded-lg overflow-hidden" style="max-width:100%;">
                 <iframe 
@@ -552,27 +457,37 @@
                   referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
               </div>
-              <li class="flex items-start gap-2"><i data-lucide="clock" class="mt-0.5"></i> Abertura às 19:00 no dia 16/09</li>
+              <li class="flex items-start gap-2"><i data-lucide="clock" class="mt-0.5"></i> Abertura às 19:00 no dia 15/09</li>
               <li class="flex items-start gap-2"><i data-lucide="mail" class="mt-0.5"></i> Contato: uegsimposiosi@gmail.com</li>
             </ul>
           </aside>
 
           <div class="lg:col-span-3 grid gap-6">
-            <div class="bg-dark-card/80 border border-white/5 rounded-2xl p-6 shadow-glow">
-              <div class="mt-4 grid sm:grid-cols-2 gap-3">
-                <a id="ctaDia1" href="https://uegsimposiosi.eventbrite.com.br" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-ueg-gold text-black font-bold px-5 py-3 rounded-xl hover:bg-ueg-gold/90">
-                  <i data-lucide="ticket"></i>
-                  <center><span>Inscrever-se pelo Eventbrite</span></center>
-                </a>
-                <a id="linkGuiaWeb" href="https://www.youtube.com/shorts/ul4PAew9OLM" target="_blank" rel="noopener" class="block bg-dark-card/80 border border-white/5 rounded-2xl p-5 hover:border-ueg-gold/30 shadow-glow">
-                <div class="flex items-center gap-3">
-                  <i data-lucide="monitor-play" class="text-ueg-gold"></i>
-                  <div>
-                    <p class="font-semibold text-white">Como inscrever-se</p>
-                    <p class="text-xs text-slate-400">Vídeo com passo-a-passo</p>
+            <div class="bg-dark-card/80 border border-white/5 rounded-2xl p-6 sm:p-8 shadow-glow">
+              <div class="flex flex-col sm:flex-row items-center gap-6 sm:gap-8">
+                <div class="qr-frame relative shrink-0 p-3">
+                  <span aria-hidden="true" class="absolute left-0 top-0 h-6 w-6 rounded-tl-lg border-l-2 border-t-2 border-ueg-gold/70"></span>
+                  <span aria-hidden="true" class="absolute right-0 top-0 h-6 w-6 rounded-tr-lg border-r-2 border-t-2 border-ueg-gold/70"></span>
+                  <span aria-hidden="true" class="absolute left-0 bottom-0 h-6 w-6 rounded-bl-lg border-l-2 border-b-2 border-ueg-gold/70"></span>
+                  <span aria-hidden="true" class="absolute right-0 bottom-0 h-6 w-6 rounded-br-lg border-r-2 border-b-2 border-ueg-gold/70"></span>
+                  <div class="rounded-lg bg-white p-4 shadow-glow">
+                    <img src="assets/images/qrcode-inscricao.png"
+                         alt="QR code para inscrição no Sympla"
+                         width="180" height="180" class="block h-44 w-44" loading="lazy" />
                   </div>
                 </div>
-              </a>
+
+                <div class="text-center sm:text-left">
+                  <span class="inline-flex items-center gap-1.5 rounded-full bg-ueg-gold/10 px-3 py-1 text-xs font-semibold text-ueg-gold">
+                    <i data-lucide="qr-code" class="w-3.5 h-3.5"></i> Aponte a câmera
+                  </span>
+                  <h3 class="mt-3 text-xl font-bold text-white">Garanta sua vaga</h3>
+                  <p class="mt-1 text-sm text-slate-400">Inscrição gratuita pelo Sympla. Escaneie o QR code com a câmera do celular ou toque no botão abaixo.</p>
+                  <a id="ctaSympla" href="https://www.sympla.com.br/evento/xv-simposio-de-tecnologia-de-informacao/3556205" target="_blank" rel="noopener" class="mt-4 inline-flex items-center justify-center gap-2 bg-ueg-gold text-black font-bold px-5 py-3 rounded-xl hover:bg-ueg-gold/90">
+                    <i data-lucide="ticket"></i>
+                    <span>Inscrever-se pelo Sympla</span>
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -582,7 +497,6 @@
                 <li>É necessário inscrever-se nos três dias</li>
                 <li>⁠Alunos da UEG devem cadastrar-se com e-mail institucional</li> 
                 <li>Cadastros devem ser com nome completo, para emissão correta do certificado</li>
-                <li>Leve o QR code para <strong>validar a presença</strong>.</li>
               </ul>
             </div>
           </div>
@@ -593,7 +507,7 @@
 
   <footer class="bg-dark-card border-t border-white/5 text-slate-400 py-10">
     <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 text-center">
-      <p class="text-white font-bold">XIV Simpósio de Tecnologia da Informação — STI UEG</p>
+      <p class="text-white font-bold">XV Simpósio de Tecnologia da Informação — STI UEG</p>
       <p class="mt-1">Universidade Estadual de Goiás — Câmpus Anápolis de Ciências Exatas e Tecnológicas</p>
       <p class="mt-6 text-xs"><a href="https://sites.google.com/ueg.br/simpsio-2024/in%C3%ADcio" target="_blank" rel="noopener noreferrer">Consulte o site da edição anterior (2024)</a>
 </p>
@@ -605,116 +519,6 @@
   </button>
 
   <script src="assets/js/Contador.js" defer></script>
-
-  <script>
-    document.documentElement.classList.remove('no-js');
-    
-    window.addEventListener('load', () => {
-      if (window.lucide && lucide.createIcons) lucide.createIcons();
-
-      // Menu mobile
-      const menuBtn = document.getElementById('menuBtn');
-      const mobileMenu = document.getElementById('mobileMenu');
-      if (menuBtn && mobileMenu) {
-        menuBtn.addEventListener('click', () => {
-          const isOpen = mobileMenu.classList.toggle('hidden') === false;
-          menuBtn.setAttribute('aria-expanded', String(isOpen));
-          if (window.lucide && lucide.createIcons) lucide.createIcons();
-        });
-        mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-          mobileMenu.classList.add('hidden');
-          menuBtn.setAttribute('aria-expanded', 'false');
-        }));
-      }
-
-      const tabs = Array.from(document.querySelectorAll('.tab-button'));
-      const contents = Array.from(document.querySelectorAll('.tab-content'));
-      function activateTab(tab){
-        tabs.forEach(t => {
-          t.classList.remove('text-ueg-gold','border-ueg-gold');
-          t.classList.add('text-slate-300','border-transparent');
-          t.setAttribute('aria-selected','false');
-        });
-        tab.classList.add('text-ueg-gold','border-ueg-gold');
-        tab.classList.remove('text-slate-300','border-transparent');
-        tab.setAttribute('aria-selected','true');
-
-        contents.forEach(c => c.classList.add('hidden'));
-        const targetId = tab.getAttribute('aria-controls');
-        const panel = document.getElementById(targetId);
-        panel?.classList.remove('hidden');
-        panel?.focus();
-
-        if (window.lucide && lucide.createIcons) lucide.createIcons();
-      }
-      tabs.forEach((tab, idx) => {
-        tab.addEventListener('click', () => activateTab(tab));
-        tab.addEventListener('keydown', (e) => {
-          if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
-            e.preventDefault();
-            const next = e.key === 'ArrowRight' ? (idx+1) % tabs.length : (idx-1+tabs.length) % tabs.length;
-            tabs[next].focus();
-            activateTab(tabs[next]);
-          }
-        });
-      });
-
-      function initCarousel(trackId, prevId, nextId){
-        const track = document.getElementById(trackId);
-        const prev = document.getElementById(prevId);
-        const next = document.getElementById(nextId);
-        if (!track || !prev || !next) return;
-
-        const scrollByAmount = () => Math.max(track.clientWidth * 0.8, 280);
-        const updateButtons = () => {
-          prev.disabled = track.scrollLeft <= 0;
-          next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
-          prev.classList.toggle('opacity-50', prev.disabled);
-          next.classList.toggle('opacity-50', next.disabled);
-        };
-        updateButtons();
-
-        prev.addEventListener('click', () => { track.scrollBy({ left: -scrollByAmount(), behavior: 'smooth' }); });
-        next.addEventListener('click', () => { track.scrollBy({ left:  scrollByAmount(), behavior: 'smooth' }); });
-        track.addEventListener('scroll', updateButtons, { passive:true });
-
-        track.setAttribute('tabindex','0');
-        track.addEventListener('keydown', (e) => {
-          if (e.key === 'ArrowLeft') prev.click();
-          if (e.key === 'ArrowRight') next.click();
-        });
-      }
-      initCarousel('speakersTrack','speakersPrev','speakersNext');
-      initCarousel('galleryTrack','galleryPrev','galleryNext');
-
-      const io = new IntersectionObserver((entries, obs) => {
-        for (const e of entries) {
-          if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); }
-        }
-      }, { threshold: 0.1 });
-      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-      const toTop = document.getElementById('toTop');
-      const onScroll = () => {
-        if (window.scrollY > 300) { toTop.style.opacity = '1'; toTop.style.pointerEvents = 'auto'; }
-        else { toTop.style.opacity = '0'; toTop.style.pointerEvents = 'none'; }
-      };
-      window.addEventListener('scroll', onScroll, { passive: true });
-      toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-      const conf = (window.STI_CONFIG && window.STI_CONFIG.links) || {};
-      const map = [
-        ['ctaDia1', 'dia1'],
-        ['ctaDia2', 'dia2'],
-        ['linkGuiaWeb', 'guiaWeb'],
-        ['linkGuiaApp', 'guiaApp'],
-        ['linkBaixar', 'baixar']
-      ];
-      map.forEach(([id, key]) => {
-        const el = document.getElementById(id);
-        if (el && conf[key]) el.setAttribute('href', conf[key]);
-      });
-    });
-  </script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>

@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const contador = document.getElementById("contador");
 
-  const startDate = new Date("2025-09-16T19:00:00").getTime();
-  const endDate = new Date("2025-09-19T00:00:00").getTime();
+  const startDate = new Date("2026-09-15T19:00:00-03:00").getTime();
+  const endDate = new Date("2026-09-18T00:00:00-03:00").getTime();
 
   function updateCountdown() {
     const now = new Date().getTime();
@@ -34,6 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
   }
 
-  updateCountdown();
   const timer = setInterval(updateCountdown, 1000);
+  updateCountdown();
 });

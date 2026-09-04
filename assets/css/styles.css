@@ -1,0 +1,18 @@
+/* Estilos personalizados do site — complementam as classes utilitárias do Tailwind */
+
+/* Scrollbar */
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-track{background:#0f172a}
+::-webkit-scrollbar-thumb{background:#0b60e0;border-radius:9999px}
+::-webkit-scrollbar-thumb:hover{background:#0062ff}
+
+/* Animação de entrada com fallback sem JS */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease, transform .7s ease}
+.reveal.active{opacity:1;transform:none}
+.no-js .reveal{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none}}
+
+/* Moldura "viewfinder" do QR code (seção de inscrições) */
+@keyframes qr-pulse{0%,100%{opacity:.35}50%{opacity:.85}}
+.qr-frame > span{animation:qr-pulse 2.8s ease-in-out infinite}
+@media (prefers-reduced-motion: reduce){.qr-frame > span{animation:none;opacity:.6}}
