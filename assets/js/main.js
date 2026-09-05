@@ -50,31 +50,101 @@ window.addEventListener('load', () => {
     });
   });
 
-  function initCarousel(trackId, prevId, nextId){
+  /* Carrossel horizontal: setas, indicadores, teclado e arrastar com o mouse. */
+  function initCarousel(trackId, prevId, nextId, dotsId){
     const track = document.getElementById(trackId);
-    const prev = document.getElementById(prevId);
-    const next = document.getElementById(nextId);
-    if (!track || !prev || !next) return;
+    if (!track) return;
+    const prev = prevId ? document.getElementById(prevId) : null;
+    const next = nextId ? document.getElementById(nextId) : null;
+    const dotsBox = dotsId ? document.getElementById(dotsId) : null;
+    const items = Array.from(track.children);
+    if (!items.length) return;
 
-    const scrollByAmount = () => Math.max(track.clientWidth * 0.8, 280);
-    const updateButtons = () => {
-      prev.disabled = track.scrollLeft <= 0;
-      next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
-      prev.classList.toggle('opacity-50', prev.disabled);
-      next.classList.toggle('opacity-50', next.disabled);
+    // Rola exatamente um item por clique, considerando o gap entre os cards.
+    const step = () => {
+      if (items.length < 2) return track.clientWidth;
+      return items[1].offsetLeft - items[0].offsetLeft;
     };
-    updateButtons();
+    const maxScroll = () => track.scrollWidth - track.clientWidth;
 
-    prev.addEventListener('click', () => { track.scrollBy({ left: -scrollByAmount(), behavior: 'smooth' }); });
-    next.addEventListener('click', () => { track.scrollBy({ left:  scrollByAmount(), behavior: 'smooth' }); });
-    track.addEventListener('scroll', updateButtons, { passive:true });
+    // Um indicador por "página" visível — com vários cards na tela, um por card confundiria.
+    const pageCount = () => Math.max(1, Math.round(maxScroll() / step()) + 1);
+    let dots = [];
+    const buildDots = () => {
+      if (!dotsBox) return;
+      const total = pageCount();
+      if (dots.length === total) return;
+      dotsBox.innerHTML = '';
+      dots = Array.from({ length: total }, (_, i) => {
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = 'carousel-dot';
+        dot.setAttribute('role', 'tab');
+        dot.setAttribute('aria-label', `Ir para a posição ${i + 1} de ${total}`);
+        dot.addEventListener('click', () => {
+          track.scrollTo({ left: Math.min(i * step(), maxScroll()), behavior: 'smooth' });
+        });
+        dotsBox.appendChild(dot);
+        return dot;
+      });
+      dotsBox.classList.toggle('hidden', total < 2);
+    };
 
-    track.setAttribute('tabindex','0');
+    const update = () => {
+      const atStart = track.scrollLeft <= 1;
+      const atEnd = track.scrollLeft >= maxScroll() - 1;
+      if (prev) { prev.disabled = atStart; prev.classList.toggle('opacity-40', atStart); }
+      if (next) { next.disabled = atEnd; next.classList.toggle('opacity-40', atEnd); }
+      const idx = Math.min(dots.length - 1, Math.round(track.scrollLeft / step()));
+      dots.forEach((dot, i) => {
+        const on = i === idx;
+        dot.classList.toggle('is-active', on);
+        dot.setAttribute('aria-selected', String(on));
+      });
+    };
+
+    prev?.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
+    next?.addEventListener('click', () => track.scrollBy({ left:  step(), behavior: 'smooth' }));
+    track.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', () => { buildDots(); update(); });
+
+    track.setAttribute('tabindex', '0');
     track.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowLeft') prev.click();
-      if (e.key === 'ArrowRight') next.click();
+      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+      e.preventDefault();
+      track.scrollBy({ left: e.key === 'ArrowLeft' ? -step() : step(), behavior: 'smooth' });
     });
+
+    // Arrastar com o mouse (o toque já funciona nativamente).
+    let dragging = false, startX = 0, startScroll = 0, moved = 0;
+    track.addEventListener('pointerdown', (e) => {
+      if (e.pointerType !== 'mouse') return;
+      dragging = true; moved = 0;
+      startX = e.clientX;
+      startScroll = track.scrollLeft;
+      track.classList.add('is-dragging');
+    });
+    track.addEventListener('pointermove', (e) => {
+      if (!dragging) return;
+      const delta = e.clientX - startX;
+      moved = Math.max(moved, Math.abs(delta));
+      track.scrollLeft = startScroll - delta;
+    });
+    const endDrag = () => {
+      if (!dragging) return;
+      dragging = false;
+      track.classList.remove('is-dragging');
+    };
+    track.addEventListener('pointerup', endDrag);
+    track.addEventListener('pointerleave', endDrag);
+    track.addEventListener('pointercancel', endDrag);
+    // Evita que o arrasto dispare cliques em links dentro dos cards.
+    track.addEventListener('click', (e) => { if (moved > 5) { e.preventDefault(); e.stopPropagation(); } }, true);
+
+    buildDots();
+    update();
   }
+  initCarousel('speakersTrack','speakersPrev','speakersNext','speakersDots');
   initCarousel('galleryTrack','galleryPrev','galleryNext');
 
   const io = new IntersectionObserver((entries, obs) => {

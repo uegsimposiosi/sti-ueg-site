@@ -308,12 +308,70 @@
           <p class="mt-3 text-slate-400">Mentes que estão moldando o futuro da tecnologia.</p>
         </div>
 
-        <div class="mt-12 flex flex-col items-center text-center bg-dark-card/80 border border-white/5 rounded-2xl p-12 md:p-16 shadow-glow">
-          <span class="grid place-items-center w-16 h-16 rounded-full bg-ueg-gold/10 text-ueg-gold">
-            <i data-lucide="users"></i>
-          </span>
-          <h3 class="mt-6 text-2xl md:text-3xl font-bold text-white">Em breve...</h3>
-          <p class="mt-2 max-w-md text-slate-400">Estamos finalizando a curadoria dos palestrantes desta edição. Volte logo para conferir as confirmações.</p>
+        <div class="relative mt-10">
+          <button id="speakersPrev" type="button"
+            class="carousel-arrow hidden md:grid absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 z-10 place-items-center w-11 h-11 rounded-full bg-dark-card border border-white/10 text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/30 transition"
+            aria-label="Palestrantes anteriores" aria-controls="speakersTrack">
+            <i data-lucide="chevron-left"></i>
+          </button>
+          <button id="speakersNext" type="button"
+            class="carousel-arrow hidden md:grid absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 place-items-center w-11 h-11 rounded-full bg-dark-card border border-white/10 text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/30 transition"
+            aria-label="Próximos palestrantes" aria-controls="speakersTrack">
+            <i data-lucide="chevron-right"></i>
+          </button>
+
+          <div id="speakersTrack"
+            class="carousel-track flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-2 focus:outline-none focus:ring-2 focus:ring-white/20 rounded-2xl"
+            role="group" aria-label="Carrossel de palestrantes">
+
+            <article class="speaker-card snap-center sm:snap-start shrink-0 w-[82vw] sm:w-[340px] lg:w-[360px] flex flex-col bg-dark-card/80 border border-white/5 rounded-2xl p-8 text-center shadow-glow hover:border-ueg-gold/30 transition">
+              <img class="w-28 h-28 rounded-full mx-auto border-4 border-white/10 object-cover"
+                   src="assets/images/participantes/CleonXavier.jpg" alt="Foto de Cleon Xavier Pereira Júnior"
+                   width="600" height="600" loading="lazy" decoding="async" />
+              <h3 class="mt-5 min-h-[3.5rem] flex items-center justify-center text-lg font-bold text-white">Cleon</h3>
+              <p class="mt-1 text-ueg-gold text-sm font-semibold">Palestrante</p>
+              <p class="mt-4 text-sm leading-relaxed text-slate-400 text-left grow">Doutor em Ciência da Computação pela UFU e professor do Instituto Federal Goiano (IF Goiano) desde 2015. Pesquisa inteligência artificial aplicada à educação e, mais recentemente, learning analytics. Antes da carreira acadêmica, atuou no mercado de tecnologia como desenvolvedor Java e programador de sistemas.</p>
+            </article>
+
+            <article class="speaker-card snap-center sm:snap-start shrink-0 w-[82vw] sm:w-[340px] lg:w-[360px] flex flex-col bg-dark-card/80 border border-white/5 rounded-2xl p-8 text-center shadow-glow hover:border-ueg-gold/30 transition">
+              <img class="w-28 h-28 rounded-full mx-auto border-4 border-white/10 object-cover"
+                   src="assets/images/participantes/OliraSaraiva.jpg" alt="Foto de Olira Saraiva Rodrigues"
+                   width="600" height="600" loading="lazy" decoding="async" />
+              <h3 class="mt-5 min-h-[3.5rem] flex items-center justify-center text-lg font-bold text-white">Olira</h3>
+              <p class="mt-1 text-ueg-gold text-sm font-semibold">Palestrante</p>
+              <p class="mt-4 text-sm leading-relaxed text-slate-400 text-left grow">Professora e pesquisadora do Programa de Pós-graduação Interdisciplinar em Educação, Linguagem e Tecnologias (PPGIELT/UEG) e líder do Grupo de Pesquisa LECCE/CNPq. Doutora em Arte e Cultura Visual (UFG), mestre em Educação (PUC-Goiás) e graduada em Letras (UEG). Tem pós-doutorados pela UFRJ, UnB, Universidade do Porto e Universidade de Aveiro (Portugal).</p>
+            </article>
+
+            <article class="speaker-card snap-center sm:snap-start shrink-0 w-[82vw] sm:w-[340px] lg:w-[360px] flex flex-col bg-dark-card/80 border border-white/5 rounded-2xl p-8 text-center shadow-glow hover:border-ueg-gold/30 transition">
+              <img class="w-28 h-28 rounded-full mx-auto border-4 border-white/10 object-cover"
+                   src="assets/images/participantes/PauloHenrique.jpg" alt="Foto de Paulo Henrique de Freitas Miranda"
+                   width="600" height="600" loading="lazy" decoding="async" />
+              <h3 class="mt-5 min-h-[3.5rem] flex items-center justify-center text-lg font-bold text-white">Paulo</h3>
+              <p class="mt-1 text-ueg-gold text-sm font-semibold">Palestrante</p>
+              <p class="mt-4 text-sm leading-relaxed text-slate-400 text-left grow">Doutorando em Administração, com mestrados em Administração (FEAD-BH), Psicologia (PUC-GO) e Gestão Empresarial (Universidade Lusófona, Lisboa) e MBAs pela FGV, FIAP e Faculdade GAP. Graduado em Administração pela Universidade Católica de Goiás e certificado Kanban pela Kanban University. Foi consultor empresarial por mais de 15 anos; hoje é sócio e professor da Faculdade GAP, FGV e UEG.</p>
+            </article>
+
+            <article class="speaker-card snap-center sm:snap-start shrink-0 w-[82vw] sm:w-[340px] lg:w-[360px] flex flex-col bg-dark-card/80 border border-white/5 rounded-2xl p-8 text-center shadow-glow hover:border-ueg-gold/30 transition">
+              <img class="w-28 h-28 rounded-full mx-auto border-4 border-white/10 object-cover"
+                   src="assets/images/participantes/CaioMartins.jpg" alt="Foto de Caio Martins Padilha Batista"
+                   width="600" height="600" loading="lazy" decoding="async" />
+              <h3 class="mt-5 min-h-[3.5rem] flex items-center justify-center text-lg font-bold text-white">Caio</h3>
+              <p class="mt-1 text-ueg-gold text-sm font-semibold">Palestrante</p>
+              <p class="mt-4 text-sm leading-relaxed text-slate-400 text-left grow">Graduado em Sistemas de Informação pela UEG e pós-graduado em Gestão de Projetos pela ILAC. Tem experiência em desenvolvimento de software e em infraestrutura e automação, com atuação em projetos no Brasil e no exterior. Foi analista de redes na TELUS em Vancouver; hoje é Automation Engineer (Robotics) na Telus US e analista de testes na UEG.</p>
+            </article>
+            <article class="speaker-card snap-center sm:snap-start shrink-0 w-[82vw] sm:w-[340px] lg:w-[360px] flex flex-col bg-dark-card/80 border border-white/5 rounded-2xl p-8 text-center shadow-glow hover:border-ueg-gold/30 transition">
+              <img class="w-28 h-28 rounded-full mx-auto border-4 border-white/10 object-cover"
+                   src="assets/images/participantes/Alaor.jpg" alt="Foto de Alaor José da Silva Junior"
+                   width="600" height="600" loading="lazy" decoding="async" />
+              <h3 class="mt-5 min-h-[3.5rem] flex items-center justify-center text-lg font-bold text-white">Alaor</h3>
+              <p class="mt-1 text-ueg-gold text-sm font-semibold">Palestrante</p>
+              <p class="mt-4 text-sm leading-relaxed text-slate-400 text-left grow">Gestor Governamental de Tecnologia da Informação do Estado de Goiás desde 2007 e Superintendente de Administração de Dados e Inteligência Analítica da SECTI desde 2023, onde lidera a estratégia estadual de dados e IA. Cofundador do Laboratório de Inovação Goiás (LIGO), que coordenou entre 2019 e 2022. Mestre e graduado em Ciência da Computação pela UFG, especialista em Informática Pericial (IPOG) e MBA em Gerenciamento de Projetos pela FGV.</p>
+            </article>
+
+          </div>
+
+          <div class="mt-6 flex items-center justify-center gap-2" id="speakersDots" role="tablist" aria-label="Selecionar palestrante"></div>
+          <p class="mt-3 text-center text-sm text-slate-500 md:hidden">Arraste para o lado para ver todos</p>
         </div>
       </div>
     </section>

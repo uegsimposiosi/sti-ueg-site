@@ -16,3 +16,15 @@
 @keyframes qr-pulse{0%,100%{opacity:.35}50%{opacity:.85}}
 .qr-frame > span{animation:qr-pulse 2.8s ease-in-out infinite}
 @media (prefers-reduced-motion: reduce){.qr-frame > span{animation:none;opacity:.6}}
+
+/* Carrossel (palestrantes) */
+.carousel-track{scrollbar-width:none;-ms-overflow-style:none;cursor:grab}
+.carousel-track::-webkit-scrollbar{display:none}
+.carousel-track.is-dragging{cursor:grabbing;scroll-behavior:auto;scroll-snap-type:none;user-select:none}
+.carousel-track.is-dragging img{pointer-events:none}
+.carousel-arrow:disabled{cursor:default}
+.carousel-dot{width:8px;height:8px;border-radius:9999px;background:rgba(255,255,255,.2);transition:width .25s ease,background-color .25s ease}
+.carousel-dot:hover{background:rgba(255,255,255,.45)}
+.carousel-dot.is-active{width:24px;background:#fff}
+.carousel-dot:focus-visible{outline:2px solid rgba(255,255,255,.6);outline-offset:2px}
+@media (prefers-reduced-motion: reduce){.carousel-track{scroll-behavior:auto}.carousel-dot{transition:none}}
