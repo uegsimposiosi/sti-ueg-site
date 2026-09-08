@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>UEG - Simpósio de Tecnologia da Informação</title>
   <meta name="description" content="Simpósio de Tecnologia da Informação da UEG — programação, palestrantes, inscrições, curso de Sistemas de Informação" />
-  <meta name="theme-color" content="#0d47a1" />
+  <meta name="theme-color" content="#0e061a" />
 
   <!-- Open Graph / Social -->
   <meta property="og:type" content="website" />
@@ -13,8 +13,8 @@
   <meta property="og:description" content="Participe do Simpósio de Tecnologia da Informação da UEG. Programação, palestrantes e inscrições." />
   <meta property="og:image" content="https://placehold.co/1200x630/0d47a1/ffffff?text=STI+UEG" />
 
-  <!-- Favicon (placeholder) -->
-  <link rel="icon" href="assets\images\UegLogoSimples.ico" />
+  <!-- Favicon -->
+  <link rel="icon" href="assets/images/UegLogoSimples.ico" />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -35,19 +35,19 @@
 <body class="bg-dark-bg text-slate-200 font-sans selection:bg-ueg-gold selection:text-black">
   <a href="#inicio" class="sr-only focus:not-sr-only focus:fixed focus:z-50 focus:top-4 focus:left-4 bg-ueg-gold text-black font-bold px-4 py-2 rounded-md">Pular para o conteúdo</a>
 
-  <header class="sticky top-0 z-50 bg-dark-bg/70 backdrop-blur border-b border-white/5">
+  <header class="sticky top-0 z-50 bg-dark-bg/85 backdrop-blur-md border-b border-white/5">
     <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 h-16 flex items-center justify-between">
       <a href="#inicio" class="flex items-center gap-3 text-white font-black tracking-wider text-xl" aria-label="Página inicial STI UEG">
-          <img src="assets\images\LogoUegBranca.png" alt="Logo UEG" class="h-7 w-auto" />
+          <img src="assets/images/LogoUegBranca.png" alt="Logo UEG" class="h-7 w-auto" />
       </a>
 
       <nav class="hidden md:flex items-center gap-6" aria-label="Navegação primária">
-        <a class="hover:text-white/90 text-slate-300" href="#sobre">Sobre</a>
-        <a class="hover:text-white/90 text-slate-300" href="#programacao">Programação</a>
-        <a class="hover:text-white/90 text-slate-300" href="#palestrantes">Palestrantes</a>
-        <a class="block px-3 py-2 rounded-md hover:bg-white/5" href="#galeria">Galeria</a>
-        <a class="hover:text-white/90 text-slate-300" href="https://meet.google.com/bhb-fqvf-buy">Assista online</a>
-        <a class="inline-flex items-center gap-2 bg-ueg-gold text-black font-bold px-4 py-2 rounded-full hover:bg-ueg-gold/90 focus:outline-none focus:ring-2 focus:ring-ueg-gold/40" href="#inscricao">
+        <a class="hover:text-white/90 text-slate-300 transition" href="#sobre">Sobre</a>
+        <a class="hover:text-white/90 text-slate-300 transition" href="#programacao">Programação</a>
+        <a class="hover:text-white/90 text-slate-300 transition" href="#palestrantes">Palestrantes</a>
+        <a class="hover:text-white/90 text-slate-300 transition" href="#galeria">Galeria</a>
+        <a class="hover:text-white/90 text-slate-300 transition" href="https://meet.google.com/bhb-fqvf-buy">Assista online</a>
+        <a class="inline-flex items-center gap-2 bg-ueg-gold text-slate-950 font-bold px-4 py-2 rounded-full hover:brightness-110 shadow-md shadow-ueg-gold/25 focus:outline-none focus:ring-2 focus:ring-ueg-gold/40 transition" href="#inscricao">
           <i data-lucide="ticket"></i>
           <span>Inscreva-se</span>
         </a>
@@ -66,7 +66,7 @@
         <a class="block px-3 py-2 rounded-md hover:bg-white/5" href="#palestrantes">Palestrantes</a>
         <a class="block px-3 py-2 rounded-md hover:bg-white/5" href="#galeria">Galeria</a>
         <a class="block px-3 py-2 rounded-md hover:bg-white/5" href="https://meet.google.com/bhb-fqvf-buy">Assista online</a>
-        <a class="mt-2 inline-flex items-center justify-center gap-2 bg-ueg-gold text-black font-bold px-4 py-2 rounded-full hover:bg-ueg-gold/90" href="#inscricao">
+        <a class="mt-2 inline-flex items-center justify-center gap-2 bg-ueg-gold text-slate-950 font-bold px-4 py-2 rounded-full hover:brightness-110 shadow-md shadow-ueg-gold/20" href="#inscricao">
           <i data-lucide="ticket"></i>
           <span>Inscreva-se</span>
         </a>
@@ -76,25 +76,41 @@
 
   <main>
     <section id="inicio" class="relative min-h-[78vh] md:min-h-[86vh] grid place-items-center overflow-hidden">
+      <!-- Imagem de fundo: classe hero-img controla opacidade via CSS -->
       <div class="absolute inset-0">
-        <img src="assets\images\WallpaperFundo.jpg" alt="Fundo abstrato de tecnologia" class="w-full h-full object-cover opacity-20" loading="eager" />
-        <!--CRÉDITOS DA IMAGEM: https://wall.alphacoders.com/big.php?i=704722-->
+        <img src="assets/images/WallpaperFundo.jpg"
+             alt="Rede de IA, circuitos e microprocessador representando tecnologia da informação"
+             class="hero-img w-full h-full"
+             loading="eager" />
+        <!-- Overlay único com gradiente suave: revela o banner no centro -->
+        <div class="hero-overlay absolute inset-0"></div>
       </div>
-      <div class="relative z-10 max-w-5xl px-4 md:px-6 text-center reveal active">
-        <h1 class="text-4xl md:text-6xl font-black tracking-tight text-white">
+
+      <div class="relative z-10 max-w-4xl px-4 md:px-6 text-center reveal active">
+        <!-- Título principal -->
+        <h1 class="text-4xl md:text-6xl font-black">
           XV Simpósio de Tecnologia da Informação
         </h1>
-        <p class="mt-2 text-slate-400 text-sm md:text-base">XVIII Semana de Iniciação Científica do Curso de Sistemas de Informação</p>
-        <p class="mt-3 text-slate-300">UEG — Campus Anápolis de Ciências Exatas e Tecnológicas</p>
-        <p class="mt-1 text-ueg-gold font-bold text-lg">15 a 17 de setembro de 2026</p>
-        <p id="contador" class="mt-1 text-ueg-gold font-bold text-lg"></p>
 
+        <!-- Subtítulo académico -->
+        <p class="hero-sub mt-3 text-sm md:text-base">
+          XVIII Semana de Iniciação Científica do Curso de Sistemas de Informação
+        </p>
+
+        <!-- Local e data -->
+        <p class="hero-location mt-4">UEG — Campus Anápolis de Ciências Exatas e Tecnológicas</p>
+        <p class="hero-date mt-1 text-lg">15 a 17 de setembro de 2026</p>
+
+        <!-- Contador regressivo (estilizado via #contador em CSS) -->
+        <p id="contador" class="mt-1 text-lg"></p>
+
+        <!-- CTAs -->
         <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-          <a href="#inscricao" class="inline-flex items-center gap-2 bg-ueg-gold text-black font-bold px-6 py-3 rounded-full hover:bg-ueg-gold/90 focus:outline-none focus:ring-2 focus:ring-ueg-gold/40">
+          <a href="#inscricao" class="btn-primary">
             <i data-lucide="send"></i>
             <span>Garanta sua vaga</span>
           </a>
-          <a href="#programacao" class="inline-flex items-center gap-2 bg-white/5 text-white px-6 py-3 rounded-full hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/10">
+          <a href="#programacao" class="btn-secondary">
             <i data-lucide="calendar"></i>
             <span>Ver programação</span>
           </a>
@@ -105,7 +121,7 @@
     <section id="sobre" class="scroll-mt-24 py-20 md:py-28">
       <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 reveal">
         <div class="text-center max-w-3xl mx-auto">
-          <h2 class="text-3xl md:text-5xl font-extrabold text-white">Conectando mentes, <span class="text-ueg-gold">criando o futuro</span></h2>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-white">Conectando mentes, <span class="text-transparent bg-clip-text bg-gradient-to-r from-ueg-purple via-pink-400 to-ueg-gold">criando o futuro</span></h2>
           <p class="mt-3 text-slate-400">Exploramos fronteiras da tecnologia e inspiramos a próxima geração de inovadores.</p>
         </div>
         <div class="mt-12 grid sm:grid-cols-2 gap-6">
@@ -541,7 +557,7 @@
                   </span>
                   <h3 class="mt-3 text-xl font-bold text-white">Garanta sua vaga</h3>
                   <p class="mt-1 text-sm text-slate-400">Inscrição gratuita pelo Sympla. Escaneie o QR code com a câmera do celular ou toque no botão abaixo.</p>
-                  <a id="ctaSympla" href="https://www.sympla.com.br/evento/xv-simposio-de-tecnologia-de-informacao/3556205" target="_blank" rel="noopener" class="mt-4 inline-flex items-center justify-center gap-2 bg-ueg-gold text-black font-bold px-5 py-3 rounded-xl hover:bg-ueg-gold/90">
+                  <a id="ctaSympla" href="https://www.sympla.com.br/evento/xv-simposio-de-tecnologia-de-informacao/3556205" target="_blank" rel="noopener" class="mt-4 inline-flex items-center justify-center gap-2 bg-ueg-gold text-slate-950 font-bold px-5 py-3 rounded-xl hover:brightness-110 shadow-lg shadow-ueg-gold/25 transition">
                     <i data-lucide="ticket"></i>
                     <span>Inscrever-se pelo Sympla</span>
                   </a>
